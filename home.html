@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRQW5HQ8');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="stylesheet" href="assets/css/home.css" />
+
+    <!-- Prevent FOUC -->
+    <style>
+        body {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
+    <!-- Load shared head content -->
+    <script id="head-loader">
+        fetch('common-files/head-common.html')
+            .then(res => res.text())
+            .then(data => {
+                const fragment = document.createRange().createContextualFragment(data);
+                document.head.prepend(fragment);
+
+                window.addEventListener('load', () => {
+                    document.body.style.opacity = '1';
+                    document.body.style.visibility = 'visible';
+                });
+            })
+            .catch(err => {
+                console.error('Head load error:', err);
+                document.body.style.opacity = '1';
+                document.body.style.visibility = 'visible';
+            });
+    </script>
+
+    <title>G3B Education - Unlock Your Study Abroad Potential</title>
+    <meta name="keywords"
+        content="study abroad consultants, international study guidance, academic success, study abroad programs, overseas education support" />
+    <meta name="description"
+        content=" Let G3B Education guide you toward international success. From university selection to visa support, we make studying abroad seamless." />
+
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="common-body"></div>
+    <script>
+        fetch('common-files/common-body.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('common-body').innerHTML = data;
+                // Reinitialize any scripts if needed
+            })
+            .catch(err => console.error('Failed to load body content:', err));
+
+    </script>
+
+    <!--start hero area-->
+    <section class="hero-area">
+        <div class="container">
+            <div class="caption-content text-center">
+                <h4>Welcome To G3B Education</h4>
+                <h2> Your Pathway to Global Learning and Success</h2>
+                <p>We empower students with comprehensive guidance and resources, enabling them to acquire foreign
+                    languages and pursue quality education abroad with all the solutions under the same roof.</p>
+                <ul class="responsive-list d-flex   justify-content-center">
+                    <li class=" flex-fill text-center">
+                        <a href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="flex-fill text-center">
+                        <a class="btn-bg" href="personalized-counseling.html">Our Services</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <!--end hero area-->
+
+    <!--start category area-->
+    <section class="discount-area-two">
+        <div class="container">
+            <div class="discount-wrap three row">
+
+                <div class="col-xl-6 col-lg-5">
+                    <!--start discount-image-->
+                    <div class="discount-img">
+                        <img src="assets/images/disct-img.webp" class="img-fluid" alt="image">
+                    </div>
+                    <!--end discount-image-->
+                </div>
+
+                <div class="col-xl-6 col-lg-7">
+                    <!--start discount-content-->
+                    <div class="discount-cont three" style=" width: 100%;">
+                        <h4>About Us</h4>
+                        <h2 style="font-size: 30px;line-height: 36px;">Welcome to G3B Education – Your Gateway to Global
+                            Learning Opportunities</h2>
+                        <p style="    color: #696969;">At G3B Education, we specialize in making the dream of studying
+                            abroad a reality for aspiring students. With a passion for transforming ambitions into
+                            success
+                            stories, we provide personalized support and expert guidance to help you achieve your
+                            academic
+                            and professional goals.</p>
+                        <div class="btn-default">
+                            <a href="about-us.html">Read More</a>
+                        </div>
+                    </div>
+                    <!-- end discount-content -->
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about-area four">
+        <div class="container">
+            <div class="row">
+                <!--start about-img-->
+                <div class="col-md-4">
+                    <div class="about-img-four">
+                        <img src="assets/images/destination-1.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <!--end about-img-->
+                <!--start about-img-->
+                <div class="col-md-4">
+                    <div class="about-img-four margin">
+                        <img src="assets/images/destination-2.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <!--end about-img-->
+                <!--start about-img-->
+                <div class="col-md-4">
+                    <div class="about-img-four">
+                        <img src="assets/images/destination-3.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <!--end about-img-->
+            </div>
+            <div class="row">
+                <!--start sec-heading-->
+                <div class="col-lg-12">
+                    <div class="sec-heading text-center">
+                        <h2>Explore Your Dream Destination with G3B Education</h2>
+                        <p class="mb-2">At G3B Education, we open doors to a world of opportunities, enabling you to
+                            pursue your academic aspirations in top destinations like the USA, UK, Canada, Australia,
+                            Europe, Asia, and beyond.</p>
+                        <p class="mb-2">As your trusted gateway to global learning, we are committed to making the dream
+                            of studying abroad a reality for ambitious students. Our dedicated team combines
+                            personalized guidance and years of expertise to simplify the complexities of international
+                            education. From choosing the right course and institution to navigating the application and
+                            visa processes, we’re with you every step of the way.</p>
+                        <p class="mb-2">Through our collaborations with leading universities and educational
+                            institutions worldwide, we provide access to prestigious programs that align with your
+                            academic interests and career goals. At G3B Education, we don't just help you study
+                            abroad—we help you excel and thrive in a global environment.</p>
+                        <p class="">Join us and embark on a transformative journey towards a bright and successful
+                            future!</p>
+                    </div>
+                </div>
+                <!--end sec-heading-->
+            </div>
+            <div class="row about-counter-wrap justify-content-center">
+                <!--start counter-single-->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>100</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Students Counselled</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end counter-single-->
+                <!--start counter-single-->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>700</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Universities</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end counter-single-->
+                <!--start counter-single-->
+                <!-- <div class="col-6 col-md-6 col-lg-3">
+                    <div class="counter-single text-center">
+                    <div class="counter-number ">
+                            <h2><span>100</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Success Rate</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>40</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Test Preparation</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end counter-single-->
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-area bg-gray why-choose-us">
+        <div class="container">
+            <div class="row">
+                <!--start why choose heading-->
+                <div class="col-xl-4 col-lg-5">
+                    <h2>Why Choose Us?</h2>
+                    <p>At G3B Education, we are committed to helping students achieve their academic and professional
+                        aspirations by offering world-class guidance and unwavering support. Here’s why students choose
+                        us as their trusted partner in their study abroad journey.</p>
+                    <div class="why-choose-btn pb-5">
+                        <a href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+                <!--end why choose heading-->
+                <div class="col-xl-8 col-lg-7">
+                    <div class="row">
+                        <!--start why choose single-->
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/1.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Expert Guidance</h3>
+                                    <p>Experienced counselors with deep knowledge of global education systems.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end why choose single-->
+                        <!--start why choose single-->
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/2.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Comprehensive Support</h3>
+                                    <p>End-to-end services from course selection to visa assistance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end why choose single-->
+                        <!--start why choose single-->
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/3.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Global Network</h3>
+                                    <p>Strong partnerships with top universities worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end why choose single-->
+                        <!--start why choose single-->
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/4.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Test Prep & Language Support</h3>
+                                    <p>Assistance with IELTS, TOEFL, GRE, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/5.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Transparency</h3>
+                                    <p>Ethical, honest, and student-focused services.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="why-choose-single">
+                                <div class="why-choose-icon">
+                                    <img src="assets/images/icons/6.webp" class="img-fluid" alt="image">
+                                </div>
+                                <div class="why-choose-cont">
+                                    <h3>Student Success</h3>
+                                    <p>Dedicated to turning dreams into success stories.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end why choose single-->
+                    </div>
+                </div>
+                <!--end choose single-->
+            </div>
+        </div>
+    </section>
+    <!--end category area-->
+    <!--start course area-->
+    <section class="course-area bg-gray our-ser">
+        <div class="container">
+            <div class="row">
+                <!--start heading-->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="sec-heading text-center">
+                        <h2>Our Services</h2>
+                    </div>
+                </div>
+                <!--end heading-->
+            </div>
+            <div class="row justify-content-center" style="row-gap: 18px;">
+                <!--start course card-->
+
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="personalized-counseling.html">
+                                <img src="assets/images/services/2.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="personalized-counseling.html">
+                                    Personalized Counseling</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="personalized-counseling.html">Read More </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="university-applications.html">
+                                <img src="assets/images/services/3.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="university-applications.html">
+                                    University Applications</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="university-applications.html">Read More </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="test-preparation.html">
+                                <img src="assets/images/services/4.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="test-preparation.html"> Test
+                                    Preparation</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="test-preparation.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="visa-assistance.html">
+                                <img src="assets/images/services/5.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="visa-assistance.html"> Visa
+                                    Assistance</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="visa-assistance.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="scholarship-and-financial-guidance.html">
+                                <img src="assets/images/services/6.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="scholarship-and-financial-guidance.html"> Scholarship and Financial
+                                    Guidance</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="scholarship-and-financial-guidance.html">Read
+                                            More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="pre-departure-and-post-arrival-support.html">
+                                <img src="assets/images/services/7.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="pre-departure-and-post-arrival-support.html">Pre-Departure and Post-Arrival
+                                    Support⁠</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a
+                                            href="pre-departure-and-post-arrival-support.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="comprehensive-study-abroad-solutions.html">
+                                <img src="assets/images/services/1.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content" style="padding: 19px 20px;">
+                            <h3 class="course-title" style="line-height: 18px;">
+                                <a href="comprehensive-study-abroad-solutions.html"> Comprehensive Study Abroad
+                                    Solutions</a>
+                            </h3>
+                            <div class="course-content-footer">
+                                <ul>
+                                    <li class="course-duration"><a href="comprehensive-study-abroad-solutions.html">Read
+                                            More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="course-area pt-5">
+        <div class="container">
+            <div class="row">
+                <!--start heading-->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="sec-heading text-center">
+                        <h2>Study Abroad</h2>
+                    </div>
+                </div>
+                <!--end heading-->
+            </div>
+            <div class="row justify-content-center" style="row-gap: 18px;">
+                <!--start course card-->
+
+                <!--start course card-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="uk.html">
+                                <img src="assets/images/study-abroad/uk.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="uk.html">Study in the UK</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="uk.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="usa.html">
+                                <img src="assets/images/study-abroad/USA.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="usa.html">Study in the USA</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="usa.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="canada.html">
+                                <img src="assets/images/study-abroad/canada.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="canada.html">Study in Canada</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="canada.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+                <!--start course card-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="new-zealand.html">
+                                <img src="assets/images/study-abroad/newzealand.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="new-zealand.html">Study in New
+                                    Zealand</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="new-zealand.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end course card-->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="ireland.html">
+                                <img src="assets/images/study-abroad/ireland.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="ireland.html">Study in Ireland</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="ireland.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="germany.html">
+                                <img src="assets/images/study-abroad/germany.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="germany.html">Study in Germany</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="germany.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--end course area-->
+
+    <!--start discount area-->
+    <section class="discount-area overlay">
+        <div class="container" >
+            <div class="discount-wrap row">
+                <div class="col-md-5 discount-img">
+                    <!-- <div class="discount-img"> -->
+                    <img src="assets/images/img-1.webp" class="img-fluid" alt="image">
+                    <!-- </div> -->
+                </div>
+                <div class="col-md-7 discount-cont whatweoffer">
+                    <h2>What We Offer at G3B Education</h2>
+                    <p>At G3B Education, we aim to transform your dreams of studying abroad into reality with a
+                        comprehensive range of services tailored to meet your unique needs. Here's what we offer
+                        to
+                        ensure your journey to global learning is seamless and successful:</p>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                        <b>Personalized
+                            Counseling:</b> Tailored guidance for academic and career goals.
+                    </h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Top
+                            University
+                            Applications:</b> Assistance with selecting courses and applying to leading
+                        universities.
+                    </h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Test
+                            Preparation
+                            Support:</b> Resources for exams like IELTS, TOEFL, and GRE.</h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Visa
+                            Assistance:</b> End-to-end support for a hassle-free visa process.</h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Financial
+                            Guidance:</b> Insights on scholarships, loans, and financial aid.</h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                        <b>Post-Arrival
+                            Support:</b> Help with accommodation and settling into your new environment.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end discount-area-->
+
+
+    <!--start testimonial-area-->
+    <section class="testimonial-area">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <!--start sec-heading-->
+                <div class="col-lg-8 ">
+                    <div class="sec-heading text-center">
+                        <h4>testimonial</h4>
+                        <h2>What Says Our Students</h2>
+                    </div>
+                </div>
+                <!--end sec-heading-->
+                <div class="wrapper-for-arrows">
+                    <div style="opacity: 0;" class="chicken"></div>
+                    <div id="reviewWrap" class="review-wrap">
+                        <div id="imgDiv" class="">
+                        </div>
+                        <div id="personName"></div>
+                        <div id="profession"></div>
+                        <div id="description">
+                        </div>
+                    </div>
+                    <div class="left-arrow-wrap arrow-wrap">
+                        <div class="arrow" id="leftArrow"></div>
+                    </div>
+                    <div class="right-arrow-wrap arrow-wrap">
+                        <div class="arrow" id="rightArrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('common-files/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load footer content:', err));
+    </script>
+
+
+    <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- jQuery js -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!--proper js-->
+    <script src="assets/js/popper.min.js"></script>
+    <!--bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--magnic popup js-->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!--syotimer js-->
+    <script src="assets/js/syotimer.min.js"></script>
+    <!--mainmenu js-->
+    <script src="assets/js/meanmenu.min.js"></script>
+    <!--counterup js-->
+    <script src="assets/js/counterup.min.js"></script>
+    <!--waypoints js-->
+    <script src="assets/js/waypoints.js"></script>
+    <!--owl carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--main js-->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const path = location.pathname.split("/").pop() || "home.html";
+            document.querySelectorAll(".mainmenu a").forEach(a =>
+                a.classList.toggle("active", a.getAttribute("href") === path)
+            );
+        });
+    </script>
+</body>
+
+<!-- Load shared scripts -->
+<div id="scripts"></div>
+<script>
+    fetch('common-files/scripts.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('scripts').innerHTML = data;
+            // Initialize any required scripts if needed
+        });
+</script>
+
+<!-- <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+<script>
+    const reviewWrap = document.getElementById("reviewWrap");
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
+    const imgDiv = document.getElementById("imgDiv");
+    const personName = document.getElementById("personName");
+    const profession = document.getElementById("profession");
+    const description = document.getElementById("description");
+    const surpriseMeBtn = document.getElementById("surpriseMeBtn");
+    const chicken = document.querySelector(".chicken");
+
+    let isChickenVisible;
+
+    let people = [
+        {
+            photo: 'url("assets/images/zaba.webp")',
+            name: "Zhaba Mohammed Shaikh",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: " I'm Zhaba Mohammed Shaikh currently pursuing my higher studies after graduation. Meeting Minal Kulkarni truly changed my perspective and thanks to her undying support and belief in me, made me choose my current path towards a new and better future, to pursue study abroad. Because of her faith in me I got more and more motivated to work harder towards my goal and I'm half way there in achieving it. I highly recommend her to anyone seeking a reliable and dedicated mentor if you want to study abroad and achieve your dreams."
+        },
+
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: "Yogesh Kadu",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "The team at G3B Education is amazing! They helped me navigate the application process for my study abroad program and provided invaluable insights about studying in Germany. I highly recommend their services to anyone planning to study overseas."
+        },
+
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: "Amit",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
+        },
+
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: " Pankaj Joshi",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
+        },
+
+
+
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: "Rahul Kumar",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
+        },
+
+    ];
+
+    imgDiv.style.backgroundImage = people[0].photo;
+    personName.innerText = people[0].name;
+    profession.innerText = people[0].profession;
+    description.innerText = people[0].description;
+    let currentPerson = 0;
+
+    //Select the side where you want to slide
+    function slide(whichSide, personNumber) {
+        let reviewWrapWidth = reviewWrap.offsetWidth + "px";
+        let descriptionHeight = description.offsetHeight + "px";
+        //(+ or -)
+        let side1symbol = whichSide === "left" ? "" : "-";
+        let side2symbol = whichSide === "left" ? "-" : "";
+
+        let tl = gsap.timeline();
+
+        if (isChickenVisible) {
+            tl.to(chicken, {
+                duration: 0.3,
+                opacity: 0
+            });
+        }
+
+        tl.to(reviewWrap, {
+            duration: 0.3,
+            opacity: 0,
+            translateX: `${side1symbol + reviewWrapWidth}`
+        });
+
+        tl.to(reviewWrap, {
+            duration: 0,
+            translateX: `${side2symbol + reviewWrapWidth}`
+        });
+
+        setTimeout(() => {
+            imgDiv.style.backgroundImage = people[personNumber].photo;
+        }, 400);
+        setTimeout(() => {
+            description.style.height = descriptionHeight;
+        }, 400);
+        setTimeout(() => {
+            personName.innerText = people[personNumber].name;
+        }, 400);
+        setTimeout(() => {
+            profession.innerText = people[personNumber].profession;
+        }, 400);
+        setTimeout(() => {
+            description.innerText = people[personNumber].description;
+        }, 400);
+
+        tl.to(reviewWrap, {
+            duration: 0.3,
+            opacity: 1,
+            translateX: 0
+        });
+
+        if (isChickenVisible) {
+            tl.to(chicken, {
+                duration: 0.3,
+                opacity: 1
+            });
+        }
+    }
+
+    function setNextCardLeft() {
+        if (currentPerson === people.length - 1) {
+            currentPerson = 0;
+            // slide("left", currentPerson);
+        } else {
+            currentPerson++;
+        }
+
+        slide("left", currentPerson);
+    }
+
+    function setNextCardRight() {
+        if (currentPerson === 0) {
+            currentPerson = people.length - 1;
+            // slide("right", currentPerson);
+        } else {
+            currentPerson--;
+        }
+
+        slide("right", currentPerson);
+    }
+
+    leftArrow.addEventListener("click", setNextCardLeft);
+    rightArrow.addEventListener("click", setNextCardRight);
+
+    if (surpriseMeBtn) {
+
+        surpriseMeBtn.addEventListener("click", () => {
+            if (chicken.style.opacity === "0") {
+                chicken.style.opacity = "1";
+                imgDiv.classList.add("move-head");
+                surpriseMeBtn.innerText = "Remove the chicken";
+                surpriseMeBtn.classList.remove("surprise-me-btn");
+                surpriseMeBtn.classList.add("hide-chicken-btn");
+                isChickenVisible = true;
+            } else if (chicken.style.opacity === "1") {
+                chicken.style.opacity = "0";
+                imgDiv.classList.remove("move-head");
+                surpriseMeBtn.innerText = "Surprise me";
+                surpriseMeBtn.classList.add("surprise-me-btn");
+                surpriseMeBtn.classList.remove("hide-chicken-btn");
+                isChickenVisible = false;
+            }
+        });
+
+    }
+
+    window.addEventListener("resize", () => {
+        description.style.height = "100%";
+    });
+</script>
+
+</html>

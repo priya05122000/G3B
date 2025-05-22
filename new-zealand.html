@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRQW5HQ8');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+    <!-- Prevent FOUC -->
+    <style>
+        body {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
+    <!-- Load shared head content -->
+    <script id="head-loader">
+        fetch('common-files/head-common.html')
+            .then(res => res.text())
+            .then(data => {
+                const fragment = document.createRange().createContextualFragment(data);
+                document.head.prepend(fragment);
+
+                window.addEventListener('load', () => {
+                    document.body.style.opacity = '1';
+                    document.body.style.visibility = 'visible';
+                });
+            })
+            .catch(err => {
+                console.error('Head load error:', err);
+                document.body.style.opacity = '1';
+                document.body.style.visibility = 'visible';
+            });
+    </script>
+
+    <title>World-Class Education Opportunities with G3B Education</title>
+    <meta name="keywords"
+        content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
+    <meta name="description"
+        content=" Join G3B Education and access partnerships with top universities. We ensure your overseas study experience is enriching and successful" />
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="common-body"></div>
+    <script>
+        fetch('common-files/common-body.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('common-body').innerHTML = data;
+                // Reinitialize any scripts if needed
+            })
+            .catch(err => console.error('Failed to load body content:', err));
+    </script>
+
+    <section class="page-banner-area">
+        <div class="container">
+            <div class="row">
+                <!--start heading-->
+                <div class="col-lg-12">
+                    <div class="banner-content text-center">
+                        <h1>NewZealand</h1>
+                        <p><a href="home.html">Home</a> <span> > </span>NewZealand</p>
+                    </div>
+                </div>
+                <!--end heading-->
+            </div>
+        </div>
+    </section>
+    <!--end hero area-->
+    <!--start blog area-->
+    <section class="blog-area two">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="">
+                        <div class="blog-post-thumb">
+                            <img src="assets/images/study-abroad/newzealand.webp" alt="image" class="img-fluid">
+                        </div>
+                        <h4 class="service-title pb-2">Study Abroad in New Zealand with G3B Education</h4>
+                        <div class="entry-content">
+                            <p>Embark on an extraordinary academic journey in New Zealand with G3B Education, your
+                                trusted partner for global learning opportunities. Known for its breathtaking
+                                landscapes, world-class education system, and vibrant culture, New Zealand offers a
+                                unique study abroad experience that combines academic excellence with unforgettable
+                                adventures.</p>
+                            <p>At G3B Education, we specialize in guiding students toward achieving their dreams of
+                                studying in New Zealand. Our expert team provides personalized support, helping you
+                                choose the ideal course and institution that aligns with your career aspirations. From
+                                undergraduate to postgraduate programs, New Zealand boasts renowned universities and
+                                colleges offering a wide array of disciplines, including engineering, business,
+                                healthcare, and creative arts.</p>
+                            <p>Navigating the complexities of studying abroad can be overwhelming, but with G3B
+                                Education by your side, the process becomes seamless. We assist with every step,
+                                including course selection, application submission, scholarship guidance, and visa
+                                processing, ensuring you transition smoothly to your new academic life.</p>
+                            <p>What sets New Zealand apart is its commitment to providing high-quality education with a
+                                focus on research and practical learning. The country’s welcoming environment, diverse
+                                communities, and strong emphasis on work-life balance create the perfect setting for
+                                academic and personal growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--start sidebar-->
+                <div class="col-xl-4 col-lg-5">
+                    <div class="blog-sidebar">
+                        <!--start widget-->
+
+                        <!--start widget-->
+                        <div class="menu-list widget">
+                            <h4>Study Abroad</h4>
+                            <ul class="widget-list">
+                                <li><a href="uk.html"><i class="fa fa-angle-right"></i> UK</a></li>
+                                <li><a href="usa.html"><i class="fa fa-angle-right"></i> USA</a></li>
+                                <li><a href="canada.html"><i class="fa fa-angle-right"></i> Canada</a></li>
+                                <li><a href="new-zealand.html"><i class="fa fa-angle-right"></i> NewZealand</a></li>
+                                <li><a href="ireland.html"><i class="fa fa-angle-right"></i>Ireland</a></li>
+                                <li><a href="germany.html"><i class="fa fa-angle-right"></i> Germany</a></li>
+                            </ul>
+                        </div>
+                        <!--end widget-->
+                        <!--start widget-->
+                        <div class="menu-list widget">
+                            <h4>Enquire Now</h4>
+                            <form action="https://g3beducation.com/send" method="post">
+                                <input type="text" name="name" placeholder="Your Name *"
+                                    class="form-control service-form" required>
+                                <input type="text" name="email" placeholder="Email Address *"
+                                    class="form-control service-form" required>
+                                <input type="number" name="mobile" placeholder="Mobile *"
+                                    class="form-control service-form" required>
+                                <input type="text" name="subject" placeholder="Subject"
+                                    class="form-control service-form">
+                                <textarea rows="4" name="message" placeholder="Write Your Message "
+                                    class="form-control service-form"></textarea>
+                                <div class="form-group mb-3">
+                                    <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
+                                        data-sitekey="6LfQdAErAAAAACpa9s2-YdDUWn0jRHecij5MeHkR"></div>
+                                    <span id="captcha" class="text-danger"></span>
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="submit" name="submit" value="submit" id="submitContact"
+                                        class="all-ser-btn btn radius-xl btn-lg">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--end widget-->
+
+                    </div>
+                </div>
+                <!--end sidebar-->
+            </div>
+
+
+
+        </div>
+    </section>
+    <!--end blog area-->
+
+    <div id="footer"></div>
+    <script>
+        fetch('common-files/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load footer content:', err));
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const path = location.pathname.split("/").pop();
+            document.querySelectorAll(".mainmenu a").forEach(link => {
+                if (link.getAttribute("href") === path) {
+                    link.classList.add("active");
+                    link.closest("ul")?.closest("li")?.querySelector("a")?.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
+    <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- jQuery js -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!--proper js-->
+    <script src="assets/js/popper.min.js"></script>
+    <!--bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--magnic popup js-->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!--syotimer js-->
+    <script src="assets/js/syotimer.min.js"></script>
+    <!--mainmenu js-->
+    <script src="assets/js/meanmenu.min.js"></script>
+    <!--counterup js-->
+    <script src="assets/js/counterup.min.js"></script>
+    <!--waypoints js-->
+    <script src="assets/js/waypoints.js"></script>
+    <!--owl carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--main js-->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Load shared scripts -->
+<div id="scripts"></div>
+<script>
+    fetch('common-files/scripts.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('scripts').innerHTML = data;
+            // Initialize any required scripts if needed
+        });
+</script>
+
+</html>

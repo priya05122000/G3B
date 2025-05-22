@@ -1,0 +1,50 @@
+.timeline {
+    display: block !important;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.timeline-card {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: #436285 !important;
+    position: relative;
+}
+
+.timeline li:before {
+    content: "";
+    width: 0.3rem;
+    height: 100% !important;
+    background: linear-gradient(to bottom, #253974, #302F6B);
+    position: absolute;
+    left: 26px;
+    border-radius: 35px;
+    /* z-index: -1; */
+}
+
+.timeline li:first-child:before {
+    top: 10%;
+    height: 50%;
+}
+
+.timeline li:last-child:before {
+    bottom: 20%;
+    height: 50%;
+}
+
+.timeline-title {
+    margin-bottom: 0.5rem;
+}
+
+.circle-custom {
+    font-size: 1rem !important;
+}
+
+.subcard {
+    padding: 10px 10px 2px 10px;
+    background: #fdfdfd;
+    color: black;
+    width: -webkit-fill-available;
+    min-height: 3.3rem;
+}

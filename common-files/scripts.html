@@ -1,0 +1,31 @@
+<!-- SCRIPTS.HTML -->
+
+
+
+<script src="../www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    $(function () {
+        $("#submitContact").click(function () {
+            var v = grecaptcha.getResponse();
+            if (v.length == 0) {
+                document.getElementById('captcha').innerHTML = "Captcha Required";
+                return false;
+            } else {
+                document.getElementById('captcha').innerHTML = "Captcha Verify";
+                return true;
+            }
+
+            var cf_services = $("#cf_services").val();
+
+            if (cf_services == "") {
+                document.getElementById('services').innerHTML = "services is required";
+                return false;
+            } else {
+                document.getElementById('services').innerHTML = "services is required";
+                return true;
+            }
+
+        });
+    });
+</script>
