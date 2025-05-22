@@ -70,6 +70,14 @@
         display: none;
     }
 
+    .discount-img.girl {
+        display: none !important;
+    }
+
+    .row.about-counter-wrap {
+        margin: 0;
+    }
+
 }
 
 
@@ -219,6 +227,15 @@
 
     .about-cont {
         padding: 20px 0 0 0;
+    }
+
+    .discount-img.girl {
+        display: none !important;
+    }
+
+
+    .row.about-counter-wrap {
+        margin: 0;
     }
 }
 
@@ -521,4 +538,17 @@
     .about-cont {
         padding: 20px 0 0 0;
     }
+
+    .floatwhatsapp {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .discount-area-two .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

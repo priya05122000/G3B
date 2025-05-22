@@ -492,7 +492,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 200px 0;
+    padding: 150px 0;
     position: relative;
 }
 
@@ -534,7 +534,7 @@ p {
 }
 
 .caption-content ul {
-    margin: 45px 0px 0;
+    margin: 35px 0px 0;
     gap: 20px;
 }
 
@@ -3814,6 +3814,7 @@ p {
     background: #0e0a38;
     padding: 61px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
 }
 
 
@@ -4100,12 +4101,12 @@ p {
 
 .floatwhatsapp {
     position: fixed;
-    width: 55px;
-    height: 55px;
-    bottom: 43px;
+    /* width: 55px; */
+    /* height: 55px; */
+    bottom: 40px;
     right: 30px;
     color: #FFF !important;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     text-align: center;
     z-index: 99999;
     cursor: pointer;
