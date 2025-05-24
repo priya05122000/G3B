@@ -3,8 +3,18 @@
 
 <head>
 
-    <link rel="stylesheet" href="assets/css/uk.css" />
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRQW5HQ8');
+    </script>
 
+    <link rel="stylesheet" href="assets/css/uk.css" />
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
@@ -22,19 +32,13 @@
     <script id="head-loader">
         fetch('common-files/head-common.html')
             .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
             })
             .catch(err => {
                 console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
             });
     </script>
 
@@ -44,32 +48,36 @@
     <meta name="description"
         content=" Join G3B Education and access partnerships with top universities. We ensure your overseas study experience is enriching and successful" />
 
-
-
-
 </head>
 
 <body>
 
-    <div id="common-body"></div>
+     <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-body').innerHTML = data;
-                // Reinitialize any scripts if needed
-            })
-            .catch(err => console.error('Failed to load body content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('common-body').innerHTML = html)
+            .catch(err => console.error('Error loading body:', err));
     </script>
 
-    <section class="page-banner-area">
+    <section class="page-banner-area banner-study">
         <div class="container">
             <div class="row">
                 <!--start heading-->
                 <div class="col-lg-12">
                     <div class="banner-content text-center">
-                        <h1>UK</h1>
-                        <p><a href="home.html">Home</a> <span> > </span>UK</p>
+                        <h1>UK : <span class="banner-span">Learn from the best
+                                and build a future that stands out
+                                worldwide.</span> </h1>
+                        <!-- <p><a href="home.html">Home</a> <span> > </span>UK</p> -->
+                        <div class=" flex-fill text-center">
+                            <a href="contact-us.html">Book Free Consultation</a>
+                        </div>
                     </div>
                 </div>
                 <!--end heading-->
@@ -129,7 +137,7 @@
                                 </li>
                             </ul>
 
-                            <br/>
+                            <br />
 
                             <h4 class="service-title pb-2">Why Should You Study in the UK?</h4>
 
@@ -160,144 +168,7 @@
                                     during holidays.</li>
                             </ul>
 
-                            <br/>
-                            <h4 class="service-title pb-2">Top UK Universities/Institutes</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>No.</th>
-                                            <th>Institution</th>
-                                            <th>QS Ranking 2025 (Globally)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Imperial College London</td>
-                                            <td>2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>University of Oxford</td>
-                                            <td>3</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>University of Cambridge</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>UCL (University College London)</td>
-                                            <td>9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>The University of Edinburgh</td>
-                                            <td>27</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>The University of Manchester</td>
-                                            <td>34</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>King's College London</td>
-                                            <td>40</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>London School of Economics and Political Science (LSE)</td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>University of Bristol</td>
-                                            <td>54</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>The University of Warwick</td>
-                                            <td>69</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="service-title pb-2">Intakes in the UK</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Intake</th>
-                                            <th>Duration</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Autumn/Fall intake</td>
-                                            <td>September to October</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Spring intake</td>
-                                            <td>January to February</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Summer intake</td>
-                                            <td>May</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="service-title pb-2">Approximate Studying Costs in the UK</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>S. No.</th>
-                                            <th>UK Study Program</th>
-                                            <th>Average Fee (in Rupees)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Undergraduate Bachelor’s degree</td>
-                                            <td>Rs. 11,00,000 to Rs. 25,00,000 per year</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Postgraduate Master's degree</td>
-                                            <td>Rs. 11,00,000 to Rs. 25,00,000 per year</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Doctoral degree</td>
-                                            <td>Rs. 17,00,000 to Rs. 27,00,000 per year</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p><i>*Subject to change</i></p>
-                            </div>
-
-                            <h4 class="service-title pb-2">Scholarships Offered in the UK</h4>
-                            <ul>
-                                <li><strong>Commonwealth Scholarship and Fellowship Plan:</strong> For Master’s,
-                                    doctoral, distance learning, academic, professional, and medical fellowships.</li>
-                                <li><strong>Chevening Scholarship:</strong> For professionals; selection by the British
-                                    High Commission and embassies.</li>
-                                <li><strong>GREAT Scholarships:</strong> For one-year master's programs across various
-                                    UK universities.</li>
-                                <li><strong>British Council Scholarships for Women in STEM:</strong> For women pursuing
-                                    a Master’s in science, technology, engineering, or mathematics at 19 UK
-                                    universities.</li>
-                                <li><strong>Global Wales Scholarships:</strong> Various scholarships for international
-                                    students offered by Global Wales.</li>
-                            </ul>
-
+                            <br />
                         </div>
                     </div>
                 </div>
@@ -305,45 +176,25 @@
                 <div class="col-xl-4 col-lg-5">
                     <div class="blog-sidebar">
                         <!--start widget-->
+                        <div id="studyabroad-widget"></div>
+                        <script>
+                            fetch('common-files/studyabroad-widget.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('studyabroad-widget').innerHTML = html)
+                                .catch(err => console.error('Error loading widget:', err));
+                        </script>
+
+                        <!--end widget-->
 
                         <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Study Abroad</h4>
-                            <ul class="widget-list">
-                                <li><a href="uk.html"><i class="fa fa-angle-right"></i> UK</a></li>
-                                <li><a href="usa.html"><i class="fa fa-angle-right"></i> USA</a></li>
-                                <li><a href="canada.html"><i class="fa fa-angle-right"></i> Canada</a></li>
-                                <li><a href="new-zealand.html"><i class="fa fa-angle-right"></i> NewZealand</a></li>
-                                <li><a href="ireland.html"><i class="fa fa-angle-right"></i>Ireland</a></li>
-                                <li><a href="germany.html"><i class="fa fa-angle-right"></i> Germany</a></li>
-                            </ul>
-                        </div>
-                        <!--end widget-->
-                        <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Enquire Now</h4>
-                            <form action="https://g3beducation.com/send" method="post">
-                                <input type="text" name="name" placeholder="Your Name *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="email" placeholder="Email Address *"
-                                    class="form-control service-form" required>
-                                <input type="number" name="mobile" placeholder="Mobile *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="subject" placeholder="Subject"
-                                    class="form-control service-form">
-                                <textarea rows="4" name="message" placeholder="Write Your Message "
-                                    class="form-control service-form"></textarea>
-                                <div class="form-group mb-3">
-                                    <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
-                                        data-sitekey="6LfQdAErAAAAACpa9s2-YdDUWn0jRHecij5MeHkR"></div>
-                                    <span id="captcha" class="text-danger"></span>
-                                </div>
-                                <div class="submit-btn">
-                                    <button type="submit" name="submit" value="submit" id="submitContact"
-                                        class="all-ser-btn btn radius-xl btn-lg">Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                        <div id="enquireform"></div>
+                        <script>
+                            fetch('common-files/enquireform.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('enquireform').innerHTML = html)
+                                .catch(err => console.error('Error loading form:', err));
+                        </script>
+
                         <!--end widget-->
 
                     </div>
@@ -351,8 +202,259 @@
                 <!--end sidebar-->
             </div>
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="service-title pb-4 pt-4">Top UK Universities/Institutes</h4>
+                    <div class="row top-uk ">
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">Imperial College London</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 2</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">University of Oxford</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 3</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">University of Cambridge</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 5</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">UCL (University College London)</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 9</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">The University of Edinburgh</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 27</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">The University of Manchester</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 34</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">King's College London</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 40</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">London School of Economics and Political Science (LSE)</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 50</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">University of Bristol</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 54</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topukcourse-card">
+                                <div class="ukimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="uk.html">The University of Warwick</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 69</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <section class=" what-we-offer-section overlay ">
+                        <div class="container">
+                            <div class=" offer-content-wrapper row">
+                                <div class=" col-xl-5 col-lg-6 d-block d-md-none d-lg-block">
+                                    <div class="discount-img" style="height: 100%;">
+                                        <img src="/assets/images/scholarship-uk.webp" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-6 col-md-12  discount-cont whatweoffer">
+                                    <div>
+
+                                        <h2>Scholarships Offered in the UK</h2>
+
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Commonwealth Scholarship and Fellowship Plan:</b> For
+                                            Master’s,
+                                            doctoral, distance learning, academic, professional, and medical
+                                            fellowships.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Chevening Scholarship:</b> For professionals; selection by
+                                            the British
+                                            High Commission and embassies.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>GREAT Scholarships:</b> For one-year master's programs
+                                            across various
+                                            UK universities.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>British Council Scholarships for Women in STEM:</b> For
+                                            women pursuing
+                                            a Master’s in science, technology, engineering, or mathematics at 19 UK
+                                            universities.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Global Wales Scholarships:</b> Various scholarships for
+                                            international
+                                            students offered by Global Wales.
+                                        </h6>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h4 class="service-title pb-4 pt-4">Intakes in the UK</h4>
+
+                    <div class="row intakes-uk ">
+                        <div class="col-lg-4">
+                            <div class="intakeuk-card">
+                                <h2 class="intakenum">
+                                    01
+                                </h2>
+                                <h3 class="course-title">
+                                    <a href="uk.html">Autumn/Fall intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : September to October</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="intakeuk-card">
+                                <h2 class="intakenum">
+                                    02
+                                </h2>
+                                <h3 class="course-title">
+                                    <a href="uk.html">Spring intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : January to February</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="intakeuk-card">
+                                <h2 class="intakenum">
+                                    03
+                                </h2>
+                                <h3 class="course-title">
+                                    <a href="uk.html">Summer intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : May</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row cost-uk pt-4">
+                        <div class="col-lg-4">
+                            <h6 class="with-line">Choose your plan</h6>
+                            <h4 class="service-title ">Approximate Studying Costs in the UK</h4>
+                            <p>Enhance your team communication with the best pricing plan and available in the market.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="costuk-card">
+                                        <h3 class="course-title">
+                                            <a href="uk.html">Undergraduate Bachelor’s degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Fee (in Rupees) :
+                                            <strong>Rs. 11,00,000 to Rs. 25,00,000 per year</strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costuk-card">
+                                        <h3 class="course-title">
+                                            <a href="uk.html">Postgraduate Master's degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Fee (in Rupees) :
+                                            <strong> Rs. 11,00,000 to Rs. 25,00,000 per year</strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costuk-card">
+                                        <h3 class="course-title">
+                                            <a href="uk.html">Doctoral degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Fee (in Rupees) :
+                                            <strong> Rs. 17,00,000 to Rs. 27,00,000 per year</strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><i>*Subject to change</i></p>
+                        </div>
+
+                    </div>
+                </div>
 
 
+            </div>
         </div>
     </section>
     <!--end blog area-->
@@ -360,12 +462,11 @@
     <div id="footer"></div>
     <script>
         fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -403,15 +504,12 @@
     <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 

@@ -33,23 +33,17 @@
 
     <!-- Load shared head content -->
     <script id="head-loader">
-        fetch('common-files/head-common.html')
-            .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
-            })
-            .catch(err => {
-                console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
-            });
-    </script>
+    fetch('common-files/head-common.html')
+        .then(res => res.text())
+        .then(html => {
+            document.head.prepend(document.createRange().createContextualFragment(html));
+            window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
+        })
+        .catch(err => {
+            console.error('Head load error:', err);
+            Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
+        });
+</script>
 
     <title>G3B Education - Unlock Your Study Abroad Potential</title>
     <meta name="keywords"
@@ -69,16 +63,18 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-    <div id="common-body"></div>
-    <script>
-        fetch('common-files/common-body.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-body').innerHTML = data;
-                // Reinitialize any scripts if needed
-            })
-            .catch(err => console.error('Failed to load body content:', err));
-    </script>
+     <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div id="common-body"></div>
+<script>
+    fetch('common-files/common-body.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('common-body').innerHTML = html)
+        .catch(err => console.error('Error loading body:', err));
+</script>
 
     <!--start hero area-->
     <section class="hero-area">
@@ -725,14 +721,13 @@
     </section>
 
     <div id="footer"></div>
-    <script>
-        fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
-    </script>
+<script>
+    fetch('common-files/footer.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('footer').innerHTML = html)
+        .catch(err => console.error('Error loading footer:', err));
+</script>
+
 
 
     <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -758,15 +753,12 @@
     <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 </html>

@@ -56,10 +56,11 @@
         height: 100%;
     }
 
-    .about-img img.mainimage {
+    .about-area.collageimages .combineimage .mainimage {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     .about-img-inner {
@@ -70,13 +71,62 @@
         display: none;
     }
 
-    .discount-img.girl {
+    /* .discount-img.girl {
+        display: none !important;
+    } */
+
+    .discount-wrap.g3beducation .discount-img {
         display: none !important;
     }
+
 
     .row.about-counter-wrap {
         margin: 0;
     }
+
+    .discount-area .discount-cont {
+        padding: 40px;
+        /* width: 55%; */
+        /* float: left; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .caption-content h2 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .sec-heading .trusted {
+        margin: 20px 140px;
+    }
+
+    .about-area.collageimages .combineimage .about8 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .blog-post-thumb {
+        height: 450px;
+        margin-bottom: 30px;
+    }
+
+    .cost-uk .costuk-card .course-title {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .contact-info-single {
+        margin-bottom: 16px;
+    }
+
+    .contact-desc {
+        margin: 0px;
+    }
+
+
 
 }
 
@@ -182,7 +232,7 @@
     }
 
     .about-area.four {
-        padding: 180px 0 75px;
+        padding: 180px 0 0px;
     }
 
     .about-area.four .sec-heading {
@@ -211,7 +261,7 @@
         height: 100%;
     }
 
-    .about-img img.mainimage {
+    .about-area.collageimages .combineimage .mainimage {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -237,6 +287,34 @@
     .row.about-counter-wrap {
         margin: 0;
     }
+
+    .discount-wrap.three {
+        height: 100%;
+    }
+
+    .caption-content h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .caption-content p {
+        font-size: 15px;
+    }
+
+    .sec-heading .trusted {
+        margin: 20px 10%;
+    }
+
+    .blog-post-thumb {
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .blog-area.two {
+        padding: 50px 0;
+    }
+
+
 }
 
 /*--------------------------------------------------------------
@@ -333,6 +411,9 @@
         margin-bottom: 25px;
     }
 
+    .discount-wrap.three {
+        height: 100%;
+    }
 }
 
 
@@ -374,15 +455,15 @@
         background-color: #fff;
         -webkit-box-shadow: 0px 20px 40px 0px rgba(51, 51, 51, 0.1);
         box-shadow: 0px 20px 40px 0px rgba(51, 51, 51, 0.1);
-        padding: 50px 10px !important;
+        padding: 30px 10px !important;
         border-radius: 20px;
         margin-top: -100px;
         width: 100%;
+        height: 100%;
     }
 
     .discount-cont {
         padding: 32px 23px 0;
-        ;
         width: 100% !important;
         float: left;
     }
@@ -422,12 +503,30 @@
         position: relative;
     }
 
+    .page-banner-area.banner-study {
+        /* background-image: url('../images/aboutus-bg.webp'); */
+        background-image: url('../images/aboutus-bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px 0 35px !important;
+        position: relative;
+    }
+
+    .page-banner-area.banner-study .banner-content h1 {
+        font-size: 41px !important;
+        line-height: 40px !important;
+        margin-bottom: 25px;
+        color: #fff;
+        font-weight: 700;
+    }
+
     .mobile {
         display: none;
     }
 
     .about-area.four {
-        padding: 70px 0 37px;
+        padding: 70px 0 0px;
     }
 
     .why-choose-us {
@@ -440,8 +539,8 @@
     }
 
     .caption-content h2 {
-        font-size: 39px !important;
-        line-height: 39px !important;
+        font-size: 38px !important;
+        line-height: 45px !important;
         color: #fff;
         font-weight: 700;
         margin-bottom: 11px !important;
@@ -449,7 +548,12 @@
 
     .caption-content {
         position: relative;
-        padding: 0 0% !important;
+        padding: 0 10% !important;
+    }
+
+    .caption-content ul {
+        margin: 20px 0px 20px;
+        gap: 20px;
     }
 
     .hero-area {
@@ -492,11 +596,17 @@
 
 
     .course-area {
-        padding: 90px 0 180px;
+        padding: 90px 0 90px;
     }
 
     .discount-area .discount-cont {
         padding: 50px 25px;
+        margin: 15px 15px 0;
+    }
+
+    .discount-area.whatwesection .discount-cont {
+        padding: 50px 25px;
+        margin: 15px 0px 0;
     }
 
     .blog-area .testpre-blog {
@@ -521,7 +631,7 @@
         height: 100%;
     }
 
-    .about-img img.mainimage {
+    .about-area.collageimages .combineimage .mainimage {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -551,4 +661,64 @@
         align-items: center;
     }
 
+    .caption-content h4 {
+        font-size: 15px;
+    }
+
+    .discount-area.discount-form {
+        padding: 50px 0;
+    }
+
+    .discount-area.whatwesection {
+        background-color: #130F40;
+        background-image: url(../images/bg-2.webp);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 0;
+    }
+
+    .discount-wrap.g3beducation {
+        margin-top: -100px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .discount-area.overlay .discount-wrap.g3beducation .discount-img {
+        border-radius: 0px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .about-area.collageimages .combineimage .about8 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .blog-post-thumb {
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .blog-area.two {
+        padding: 50px 0;
+    }
+
+    .page-banner-area .banner-content .flex-fill a {
+        padding: 10px 30px;
+    }
+
+    .banner-content .banner-span {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .contact-form{
+        padding: 30px;
+    }
 }

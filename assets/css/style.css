@@ -487,16 +487,30 @@ p {
 /*-------------------------------------------------------------------------------------
     Hero Area
 ---------------------------------------------------------------------------------------*/
+
 .hero-area {
-    background-image: url('../images/home-bg.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 150px 0;
+    padding: 110px 0;
     position: relative;
 }
 
-.hero-area:before {
+.hero-area.item1 {
+    background-image: url('/assets/images/home/img-1.webp');
+}
+
+.hero-area.item2 {
+    background-image: url('/assets/images/home/img-2.webp');
+}
+
+.hero-area.item3 {
+    background-image: url('/assets/images/home/img-3.webp');
+}
+
+.hero-area.item1:before,
+.hero-area.item2:before,
+.hero-area.item3:before {
     content: '';
     position: absolute;
     left: 0;
@@ -505,6 +519,9 @@ p {
     height: 100%;
     background-color: rgba(5, 1, 51, 0.7);
 }
+
+
+
 
 .caption-content {
     position: relative;
@@ -662,6 +679,26 @@ p {
     padding-bottom: 270px;
 }
 
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 110px;
+    left: 0;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+
+
 /*-------------------------------------------------------------------------------------
     Section Heading
 ---------------------------------------------------------------------------------------*/
@@ -683,6 +720,11 @@ p {
     font-size: 45px;
     line-height: 55px;
     font-weight: 700;
+    margin-bottom: 0;
+}
+
+.sec-heading .trusted {
+    margin: 0px;
 }
 
 .studycontent h2 {
@@ -1082,6 +1124,24 @@ p {
     position: relative
 }
 
+.about-area.collageimages .combineimage .mainimage {
+    width: 300px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.about-area.collageimages .combineimage .about7 {
+    width: 300px;
+    height: 330px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.about-area.collageimages .combineimage .about8 {
+    width: 270px;
+    height: 297px;
+    object-fit: cover;
+}
 
 
 .about-img {
@@ -1158,7 +1218,7 @@ p {
 }
 
 .about-area.four {
-    padding: 210px 0 75px;
+    padding: 210px 0 0px;
 }
 
 .about-img-four img {
@@ -1343,6 +1403,12 @@ p {
     position: relative
 }
 
+.course-thumbnail img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .course-card.three h5 {
     position: absolute;
     top: 15px;
@@ -1377,9 +1443,18 @@ p {
     Discount Area
 ---------------------------------------------------------------------------------------*/
 
-.discount-area {
+.discount-area.overlay {
     background-color: #130F40;
     background-image: url('../images/bg-2.webp');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.discount-area.discount-form {
+    background-color: transparent;
+    background-image: none;
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1392,6 +1467,13 @@ p {
 
 .discount-wrap {
     /* background-color: #130F40; */
+    /* margin-top: -210px; */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.discount-wrap.g3beducation {
     margin-top: -210px;
     border-radius: 10px;
     overflow: hidden;
@@ -1409,6 +1491,7 @@ p {
     padding: 50px 40px;
     border-radius: 20px;
     margin-top: -100px;
+    height: 490px;
 }
 
 .discount-area-two .discount-img {
@@ -1418,7 +1501,7 @@ p {
     background-color: white;
 }
 
-.discount-area .discount-wrap .discount-img {
+.discount-area.overlay .discount-wrap .discount-img {
     /* border: 10px solid #fff; */
     /* border-top: none; */
     /* border-radius: 10px 0 10px 10px; */
@@ -1597,6 +1680,15 @@ p {
 
 .discount-cont.three .btn-default a:hover {
     background-color: #130F40;
+}
+
+.discount-area .contact-form {
+
+    padding: 0px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(51 51 51 / 10%);
+    box-shadow: 0px 0px 15px 0px rgb(51 51 51 / 10%);
+
 }
 
 /*-------------------------------------------------------------------------------------
@@ -2984,7 +3076,7 @@ p {
     padding: 15px 0px 15px 20px;
     font-family: "Rubik", Sans-serif;
     font-size: 16px;
-    height: 55px;
+    height: 50px;
     border-radius: 5px;
 }
 
@@ -3274,7 +3366,7 @@ p {
 }
 
 .menu-list.widget {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .widget-list li a:hover {
@@ -3293,10 +3385,18 @@ p {
     margin-bottom: 15px;
 }
 
+.blog-post-thumb {
+    height: 420px;
+    margin-bottom: 30px;
+}
+
 .blog-post-thumb img {
     margin-bottom: 30px;
     border-radius: 5px;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .blog-posts-meta {
@@ -3526,7 +3626,7 @@ p {
     background-position: 80% 20%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 85px 0 53px;
+    padding: 85px 0 85px;
     position: relative;
 }
 
@@ -3538,6 +3638,18 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 15, 64, 0.8);
+}
+
+.page-banner-area .banner-content .flex-fill a {
+    /* display: block; */
+    background-color: #FF630E;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .banner-content h1 {
@@ -3777,10 +3889,25 @@ p {
 }
 
 .contact-form input {
-    height: 55px;
+    height: 50px;
     font-family: 'Rubik';
     padding-left: 20px;
     margin-bottom: 20px;
+}
+
+.contact-form select {
+    height: 50px !important;
+    font-family: 'Rubik';
+    padding-left: 15px;
+    margin-bottom: 20px;
+
+    appearance: none;
+    /* Remove default arrow */
+    background: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 15px center;
+    background-color: white;
+    background-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .contact-form textarea {
@@ -3972,7 +4099,7 @@ p {
     font-size: 20px;
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 2px;
     color: #FF630E;
 }
 
@@ -4001,8 +4128,12 @@ p {
     color: white;
 }
 
+select.form-control:not([size]):not([multiple]) {
+    height: 50px;
+}
+
 .service-form {
-    height: 55px;
+    height: 50px;
     font-family: 'Rubik';
     padding-left: 20px;
     margin-bottom: 20px;
@@ -4127,4 +4258,9 @@ p {
 
 .color-grey {
     color: #696969 !important;
+}
+
+.banner-content .banner-span {
+    font-weight: 500;
+    font-size: 40px;
 }

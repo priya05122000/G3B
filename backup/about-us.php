@@ -257,7 +257,7 @@
                         <div class="about-img two">
                             <div class=" text-center">
                                 <div class="video-player d-table">
-                                    <img src="assets/images/team/minal.jpg" class="img-fluid">
+                                    <img src="assets/images/team/minal.webp" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -297,7 +297,7 @@
                         <div class="about-img two">
                             <div class=" text-center">
                                 <div class="video-player d-table">
-                                    <img src="assets/images/team/ashwarya.jpg" class="img-fluid">
+                                    <img src="assets/images/team/ashwarya.webp" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                         <div class="about-img two">
                             <div class=" text-center">
                                 <div class="video-player d-table">
-                                    <img src="assets/images/team/pushkar.jpg" class="img-fluid">
+                                    <img src="assets/images/team/pushkar.webp" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -351,7 +351,7 @@
                         <div class="about-img two">
                             <div class=" text-center">
                                 <div class="video-player d-table">
-                                    <img src="assets/images/team/vanita.jpg" class="img-fluid">
+                                    <img src="assets/images/team/vanita.webp" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -369,7 +369,7 @@
                         <div class="about-img two">
                             <div class=" text-center">
                                 <div class="video-player d-table">
-                                    <img src="assets/images/team/harshita.jpg" class="img-fluid">
+                                    <img src="assets/images/team/harshita.webp" class="img-fluid">
                                 </div>
                             </div>
                         </div>

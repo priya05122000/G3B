@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRQW5HQ8');
+    </script>
+
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
@@ -19,19 +31,13 @@
     <script id="head-loader">
         fetch('common-files/head-common.html')
             .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
             })
             .catch(err => {
                 console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
             });
     </script>
 
@@ -45,26 +51,33 @@
 
 <body>
 
-    <div id="common-body"></div>
+     <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-body').innerHTML = data;
-                // Reinitialize any scripts if needed
-            })
-            .catch(err => console.error('Failed to load body content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('common-body').innerHTML = html)
+            .catch(err => console.error('Error loading body:', err));
     </script>
 
 
-    <section class="page-banner-area">
+    <section class="page-banner-area banner-study">
         <div class="container">
             <div class="row">
                 <!--start heading-->
                 <div class="col-lg-12">
                     <div class="banner-content text-center">
-                        <h1>USA</h1>
-                        <p><a href="home.html">Home</a> <span> > </span>USA</p>
+                        <h1>USA : <span class="banner-span">Shape your future in the hub of
+                                innovation and
+                                excellence.</span> </h1>
+                        <!-- <p><a href="home.html">Home</a> <span> > </span>USA</p> -->
+                        <div class=" flex-fill text-center">
+                            <a href="contact-us.html">Book Free Consultation</a>
+                        </div>
                     </div>
                 </div>
                 <!--end heading-->
@@ -139,43 +152,25 @@
                         <!--start widget-->
 
                         <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Study Abroad</h4>
-                            <ul class="widget-list">
-                                <li><a href="uk.html"><i class="fa fa-angle-right"></i> UK</a></li>
-                                <li><a href="usa.html"><i class="fa fa-angle-right"></i> USA</a></li>
-                                <li><a href="canada.html"><i class="fa fa-angle-right"></i> Canada</a></li>
-                                <li><a href="new-zealand.html"><i class="fa fa-angle-right"></i> NewZealand</a></li>
-                                <li><a href="ireland.html"><i class="fa fa-angle-right"></i>Ireland</a></li>
-                                <li><a href="germany.html"><i class="fa fa-angle-right"></i> Germany</a></li>
-                            </ul>
-                        </div>
+                        <div id="studyabroad-widget"></div>
+                        <script>
+                            fetch('common-files/studyabroad-widget.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('studyabroad-widget').innerHTML = html)
+                                .catch(err => console.error('Error loading widget:', err));
+                        </script>
+
                         <!--end widget-->
+
                         <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Enquire Now</h4>
-                            <form action="https://g3beducation.com/send" method="post">
-                                <input type="text" name="name" placeholder="Your Name *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="email" placeholder="Email Address *"
-                                    class="form-control service-form" required>
-                                <input type="number" name="mobile" placeholder="Mobile *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="subject" placeholder="Subject"
-                                    class="form-control service-form">
-                                <textarea rows="4" name="message" placeholder="Write Your Message "
-                                    class="form-control service-form"></textarea>
-                                <div class="form-group mb-3">
-                                    <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
-                                        data-sitekey="6LfQdAErAAAAACpa9s2-YdDUWn0jRHecij5MeHkR"></div>
-                                    <span id="captcha" class="text-danger"></span>
-                                </div>
-                                <div class="submit-btn">
-                                    <button type="submit" name="submit" value="submit" id="submitContact"
-                                        class="all-ser-btn btn radius-xl btn-lg">Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                        <div id="enquireform"></div>
+                        <script>
+                            fetch('common-files/enquireform.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('enquireform').innerHTML = html)
+                                .catch(err => console.error('Error loading form:', err));
+                        </script>
+
                         <!--end widget-->
 
                     </div>
@@ -192,12 +187,11 @@
     <div id="footer"></div>
     <script>
         fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -234,15 +228,12 @@
     <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 </html>

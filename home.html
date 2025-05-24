@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -20,6 +19,8 @@
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/logoslider.css" />
+
 
     <!-- Prevent FOUC -->
     <style>
@@ -34,19 +35,13 @@
     <script id="head-loader">
         fetch('common-files/head-common.html')
             .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
             })
             .catch(err => {
                 console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
             });
     </script>
 
@@ -56,19 +51,16 @@
     <meta name="description"
         content=" Let G3B Education guide you toward international success. From university selection to visa support, we make studying abroad seamless." />
 
-
 </head>
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <div id="common-body"></div>
+<div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(response => response.text())
@@ -81,7 +73,7 @@
     </script>
 
     <!--start hero area-->
-    <section class="hero-area">
+    <!-- <section class="hero-area">
         <div class="container">
             <div class="caption-content text-center">
                 <h4>Welcome To G3B Education</h4>
@@ -92,14 +84,87 @@
                     <li class=" flex-fill text-center">
                         <a href="contact-us.html">Book Free Consultation</a>
                     </li>
-                    <!-- <li class="flex-fill text-center">
-                        <a class="btn-bg" href="personalized-counseling.html">Our Services</a>
-                    </li> -->
                 </ul>
-
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section class="hero-area item1">
+                    <div class="container">
+                        <!-- <img src="/assets/images/home/img-1.webp" class="d-block w-100" alt="Slide 1"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>Study Abroad Made Easy – End-to-End Guidance You Can Trust"</h2>
+                            <p>From Application to Arrival – Complete Study Abroad Support Under One Roof
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item ">
+                <section class=" hero-area item2">
+                    <div class="container">
+                        <!-- <img src="images/slide2.webp" class="d-block w-100" alt="Slide 2"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>Top-Rated Coaching for IELTS, TOEFL, GRE, GMAT & SAT
+                            </h2>
+                            <p>Achieve Your Dream Scores with Expert Exam Coaching
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item">
+                <section class=" hero-area item3">
+                    <div class="container ">
+                        <!-- <img src="images/slide2.webp" class="d-block w-100" alt="Slide 2"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>"Your Trusted Gateway to Study Abroad Success"</h2>
+                            <p> Start Your International Education Journey with Expert Guidance
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
     <!--end hero area-->
 
     <!--start category area-->
@@ -107,10 +172,10 @@
         <div class="container">
             <div class="discount-wrap three row">
 
-                <div class="col-xl-6 col-lg-5">
+                <div class="col-xl-6 col-lg-5" style="height: 100%;">
                     <!--start discount-image-->
                     <div class="discount-img">
-                        <img src="assets/images/disct-img.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/home-about.webp" class="img-fluid" alt="image">
                     </div>
                     <!--end discount-image-->
                 </div>
@@ -119,9 +184,11 @@
                     <!--start discount-content-->
                     <div class="discount-cont three" style=" width: 100%;">
                         <h4>About Us</h4>
-                        <h2 style="font-size: 30px;line-height: 36px;">Welcome to G3B Education – Your Gateway to Global
+                        <h2 style="font-size: 30px;line-height: 36px;">Welcome to G3B Education – Your Gateway to
+                            Global
                             Learning Opportunities</h2>
-                        <p style="    color: #696969;">At G3B Education, we specialize in making the dream of studying
+                        <p style="    color: #696969;">At G3B Education, we specialize in making the dream of
+                            studying
                             abroad a reality for aspiring students. With a passion for transforming ambitions into
                             success
                             stories, we provide personalized support and expert guidance to help you achieve your
@@ -184,21 +251,21 @@
                 <!--start about-img-->
                 <div class="col-md-4">
                     <div class="about-img-four">
-                        <img src="assets/images/destination-1.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-1.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
                 <!--start about-img-->
                 <div class="col-md-4">
                     <div class="about-img-four margin">
-                        <img src="assets/images/destination-2.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-2.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
                 <!--start about-img-->
                 <div class="col-md-4">
                     <div class="about-img-four">
-                        <img src="assets/images/destination-3.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-3.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
@@ -209,12 +276,16 @@
                     <div class="sec-heading text-center">
                         <h2>Explore Your Dream Destination with G3B Education</h2>
                         <p class="mb-2">At G3B Education, we open doors to a world of opportunities, enabling you to
-                            pursue your academic aspirations in top destinations like the USA, UK, Canada, Australia,
+                            pursue your academic aspirations in top destinations like the USA, UK, Canada,
+                            Australia,
                             Europe, Asia, and beyond.</p>
-                        <p class="mb-2">As your trusted gateway to global learning, we are committed to making the dream
+                        <p class="mb-2">As your trusted gateway to global learning, we are committed to making the
+                            dream
                             of studying abroad a reality for ambitious students. Our dedicated team combines
-                            personalized guidance and years of expertise to simplify the complexities of international
-                            education. From choosing the right course and institution to navigating the application and
+                            personalized guidance and years of expertise to simplify the complexities of
+                            international
+                            education. From choosing the right course and institution to navigating the application
+                            and
                             visa processes, we’re with you every step of the way.</p>
                         <p class="mb-2">Through our collaborations with leading universities and educational
                             institutions worldwide, we provide access to prestigious programs that align with your
@@ -230,14 +301,44 @@
         </div>
     </section>
 
+    <!--start discount area-->
+    <section class="discount-area discount-form">
+        <div class="container">
+            <div class="discount-wrap row">
+                <div class="col-lg-5 col-xl-5 discount-img girl">
+                    <!-- <div class="discount-img"> -->
+                    <img src="/assets/images/home/home-form.webp" class="img-fluid" alt="image">
+                    <!-- </div> -->
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12 discount-cont whatweoffer">
+
+                    <div id="contactusform"></div>
+                    <script>
+                        fetch('common-files/contactusform.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('contactusform').innerHTML = data;
+                                // Reinitialize any scripts if needed
+                            })
+                            .catch(err => console.error('Failed to load body content:', err));
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end discount-area-->
+
     <section class="why-choose-area bg-gray why-choose-us">
         <div class="container">
             <div class="row">
                 <!--start why choose heading-->
                 <div class="col-xl-4 col-lg-5">
                     <h2>Why Choose Us?</h2>
-                    <p>At G3B Education, we are committed to helping students achieve their academic and professional
-                        aspirations by offering world-class guidance and unwavering support. Here’s why students choose
+                    <p>At G3B Education, we are committed to helping students achieve their academic and
+                        professional
+                        aspirations by offering world-class guidance and unwavering support. Here’s why students
+                        choose
                         us as their trusted partner in their study abroad journey.</p>
                     <div class="why-choose-btn pb-5">
                         <a href="contact-us.html">Contact Us</a>
@@ -360,7 +461,8 @@
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
-                                    <li class="course-duration"><a href="personalized-counseling.html">Read More </a>
+                                    <li class="course-duration"><a href="personalized-counseling.html">Read More
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -383,7 +485,8 @@
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
-                                    <li class="course-duration"><a href="university-applications.html">Read More </a>
+                                    <li class="course-duration"><a href="university-applications.html">Read More
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -401,8 +504,7 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="test-preparation.html"> Test
-                                    Preparation</a>
+                                <a href="test-preparation.html">Test Preparation</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -423,8 +525,7 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="visa-assistance.html"> Visa
-                                    Assistance</a>
+                                <a href="visa-assistance.html"> Visa Assistance</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -484,7 +585,8 @@
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="comprehensive-study-abroad-solutions.html">
-                                <img src="assets/images/services/1.webp" class="img-fluid" alt="image">
+                                <img src="assets/images/services/1.webp" class="img-fluid" alt="image"
+                                    style="object-position: top;">
                             </a>
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
@@ -505,6 +607,83 @@
 
         </div>
     </section>
+
+    <!-- Logo Slider Section -->
+    <section class="logo-slider-area bg-white pt-5 pb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-12 sec-heading m-0 text-center text-xl-left">
+                    <h2>Our Trusted Partners</h2>
+                    <p class="trusted">We collaborate with leading institutions and organizations that share our vision
+                        for
+                        transformative education. Together, we deliver innovative learning solutions to empower students
+                        worldwide.</p>
+                </div>
+                <div class="col-xl-7 col-lg-12">
+                    <div style="display: flex; align-items: center;justify-content: center;">
+                        <div class="slider">
+                            <div class="slide-track">
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100"
+                                        width="250" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="course-area pt-5">
         <div class="container">
@@ -657,12 +836,12 @@
     <!--end course area-->
 
     <!--start discount area-->
-    <section class="discount-area overlay">
+    <section class="discount-area overlay whatwesection">
         <div class="container">
-            <div class="discount-wrap row">
-                <div class="col-md-5 discount-img girl">
+            <div class="discount-wrap g3beducation row">
+                <div class="col-lg-5 col-xl-5 discount-img girl">
                     <!-- <div class="discount-img"> -->
-                    <img src="assets/images/img-1.webp" class="img-fluid" alt="image">
+                    <img src="/assets/images/home/whatweoffer.webp" class="img-fluid" alt="image">
                     <!-- </div> -->
                 </div>
                 <div class="col-xl-7 col-lg-12 col-md-12 discount-cont whatweoffer">
@@ -736,12 +915,11 @@
     <div id="footer"></div>
     <script>
         fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
     </script>
+
 
 
     <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -766,6 +944,7 @@
     <!--main js-->
     <script src="assets/js/custom.js"></script>
 
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const path = location.pathname.split("/").pop() || "home.html";
@@ -774,17 +953,15 @@
             );
         });
     </script>
+
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 <!-- <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
@@ -813,33 +990,64 @@
 
         {
             photo: 'url("assets/images/no-face.webp")',
-            name: "Yogesh Kadu",
+            name: "Priya Natarajan",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "The team at G3B Education is amazing! They helped me navigate the application process for my study abroad program and provided invaluable insights about studying in Germany. I highly recommend their services to anyone planning to study overseas."
+            description: "Joining an Australian university was easy with G3B Education’s expert help. Visa process guidance was smooth. I also liked the spoken English training for interviews. Highly recommend them."
         },
 
         {
             photo: 'url("assets/images/no-face.webp")',
-            name: "Amit",
+            name: "Arjun Selvam",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
+            description: "G3B Education helped me with TOEFL test prep which was was excellent.Now I am living my dream of studying in Netherlands."
         },
 
         {
             photo: 'url("assets/images/no-face.webp")',
-            name: " Pankaj Joshi",
+            name: " Karthik Raj",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
+            description: "G3B Education assisted me with IELTS and UK visa procedure. They clarified everything and it was simple. I'm now studying in the UK!."
         },
-
-
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: "Sagar Deshmukh",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "G3B Education helped me with GRE training to get a good score which led to studying at a good Canadian University."
+        },
 
         {
             photo: 'url("assets/images/no-face.webp")',
-            name: "Rahul Kumar",
+            name: "Priyanka Patil",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
+            description: "Thanks to G3B Education for their Scholarship guidance. Now I am in a reputed Australian university. They also gave continuous support during my admission journey."
         },
+        {
+            photo: 'url("assets/images/no-face.webp")',
+            name: "Rohit Jadhav",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "With G3B Education’s help I got into one of the UK universities. Their Visa guidance was very helpful. Whole team was very professional and supportive."
+        },
+
+        // {
+        //     photo: 'url("assets/images/no-face.webp")',
+        //     name: "Amit",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
+        // },
+
+        // {
+        //     photo: 'url("assets/images/no-face.webp")',
+        //     name: " Pankaj Joshi",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
+        // },
+
+        // {
+        //     photo: 'url("assets/images/no-face.webp")',
+        //     name: "Rahul Kumar",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
+        // },
 
     ];
 

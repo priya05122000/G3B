@@ -35,19 +35,13 @@
     <script id="head-loader">
         fetch('common-files/head-common.html')
             .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
             })
             .catch(err => {
                 console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
             });
     </script>
 
@@ -63,22 +57,17 @@
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <div id="common-body"></div>
+<div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-body').innerHTML = data;
-                // Reinitialize any scripts if needed
-            })
-            .catch(err => console.error('Failed to load body content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('common-body').innerHTML = html)
+            .catch(err => console.error('Error loading body:', err));
     </script>
 
     <!--start hero area-->
@@ -102,88 +91,83 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="contact-desc">
-                        <h2>Leave Us A Message</h2>
+                    <div>
+                        <div class="contact-desc">
+                            <h2>Leave Us A Message</h2>
+                        </div>
+
+                        <div class="contact-info-single">
+                            <div class="contact-icon">
+                                <img src="assets/images/icons/email.webp">
+                            </div>
+                            <div class="contact-cont">
+                                <h3>Email Address :</h3>
+                                <p><a
+                                        href="mailto:admissions.g3beducation@gmail.com">admissions.g3beducation@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-info-single">
+                            <div class="contact-icon">
+                                <img src="assets/images/icons/telephone.webp">
+                            </div>
+                            <div class="contact-cont">
+                                <h3>Phone Number :</h3>
+                                <p><a href="tel:+918928659569">+91-8928659569</a> / <a
+                                        href="tel:+919820049389">+91-9820049389</a></p>
+
+                            </div>
+                        </div>
+                        <div class="contact-info-single">
+                            <div class="contact-icon">
+                                <img src="assets/images/icons/map.webp">
+                            </div>
+                            <div class="contact-cont">
+                                <h3>Our Location :</h3>
+                                <p>A-207, Om Sai Datta Niwas, Plot No. A32, Opp. Nerul-(W) Railway Station, Nerul, Navi
+                                    Mumbai-400706</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-single">
+                            <div class="contact-icon">
+                                <img src="assets/images/icons/map.webp">
+                            </div>
+                            <div class="contact-cont">
+
+                                <h3>Branch Office :</h3>
+                                <p>1st Floor, Pollution Control Office Nearby,
+                                    YR Mahal, Water Tank Road,
+                                    Vetturnimadam, Nagercoil,
+                                    Tamil Nadu - 629001.</p>
+
+                            </div>
+                        </div>
+                        <div class="contact-info-single">
+                            <div class="contact-icon">
+                                <img src="assets/images/icons/clock.webp">
+                            </div>
+                            <div class="contact-cont">
+
+                                <h3>Business Hours :</h3>
+                                <p>Monday to Friday : 10:00 AM – 8:00 PM / Saturday: 10:00 AM – 4:00 PM</p>
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-info-single">
-                        <div class="contact-icon">
-                            <img src="assets/images/icons/email.webp">
-                        </div>
-                        <div class="contact-cont">
-                            <h3>Email Address :</h3>
-                            <p><a href="mailto:admissions.g3beducation@gmail.com">admissions.g3beducation@gmail.com</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-info-single">
-                        <div class="contact-icon">
-                            <img src="assets/images/icons/telephone.webp">
-                        </div>
-                        <div class="contact-cont">
-                            <h3>Phone Number :</h3>
-                            <p><a href="tel:+918928659569">+91-8928659569</a> / <a
-                                    href="tel:+919820049389">+91-9820049389</a></p>
-
-                        </div>
-                    </div>
-                    <div class="contact-info-single">
-                        <div class="contact-icon">
-                            <img src="assets/images/icons/map.webp">
-                        </div>
-                        <div class="contact-cont">
-                            <h3>Our Location :</h3>
-                            <p>A-207, Om Sai Datta Niwas, Plot No. A32, Opp. Nerul-(W) Railway Station, Nerul, Navi
-                                Mumbai-400706</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-single">
-                        <div class="contact-icon">
-                            <img src="assets/images/icons/map.webp">
-                        </div>
-                        <div class="contact-cont">
-
-                            <h3>Branch Office :</h3>
-                            <p>1st Floor, Pollution Control Office Nearby,
-                                YR Mahal, Water Tank Road,
-                                Vetturnimadam, Nagercoil,
-                                Tamil Nadu - 629001.</p>
-
-                        </div>
-                    </div>
-                    <div class="contact-info-single">
-                        <div class="contact-icon">
-                            <img src="assets/images/icons/clock.webp">
-                        </div>
-                        <div class="contact-cont">
-
-                            <h3>Business Hours :</h3>
-                            <p>Monday to Friday : 10:00 AM – 8:00 PM / Saturday: 10:00 AM – 4:00 PM</p>
-
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="contact-form">
-                        <form action="send" method="post">
-                            <input type="text" name="name" placeholder="Your Name *" class="form-control" required>
-                            <input type="text" name="email" placeholder="Email Address *" class="form-control" required>
-                            <input type="number" name="mobile" placeholder="Mobile *" class="form-control" required>
-                            <input type="text" name="subject" placeholder="Subject" class="form-control">
-                            <textarea rows="4" name="message" placeholder="Write Your Message "
-                                class="form-control"></textarea>
-                            <div class="form-group mb-3">
-                                <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
-                                    data-sitekey="6LfQdAErAAAAACpa9s2-YdDUWn0jRHecij5MeHkR"></div>
-                                <span id="captcha" class="text-danger"></span>
-                            </div>
-                            <div class="submit-btn">
-                                <button type="submit" name="submit" value="submit" id="submitContact"
-                                    class="btn radius-xl btn-lg">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                    <div id="contactusform" style="height: 100%;"></div>
+                    <script>
+                        fetch('common-files/contactusform.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('contactusform').innerHTML = data;
+                                // Reinitialize any scripts if needed
+                            })
+                            .catch(err => console.error('Failed to load body content:', err));
+                    </script>
                 </div>
             </div>
         </div>
@@ -193,12 +177,11 @@
     <div id="footer"></div>
     <script>
         fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -234,15 +217,12 @@
     <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 </html>

@@ -33,3 +33,219 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #e0f7fa;
 }
+
+.top-germany .topgermanycourse-card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 3px solid #3498db;
+    padding: 20px;
+    height: 200px;
+}
+
+.top-germany .topgermanycourse-card:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.top-germany .topgermanycourse-card .germanyimage img {
+    width: 50px;
+    height: 50px;
+}
+
+.top-germany .topgermanycourse-card .course-title {
+    margin: 14px 0 10px 0;
+    line-height: 18px;
+}
+
+.top-germany .topgermanycourse-card .course-rank {
+    padding: 0;
+    margin: 0;
+}
+
+.intakes-germany .intakegermany-card {
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #fff;
+    position: relative;
+    border-left: 3px solid #FF630E;
+    padding: 20px;
+    /* height: 200px; */
+}
+
+.intakes-germany .intakegermany-card:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.intakes-germany .intakegermany-card .intakenum {
+    color: #FF630E;
+}
+
+.intakes-germany .intakegermany-card .course-title {
+    margin: 10px 0 10px 0;
+    line-height: 18px;
+
+}
+
+.intakes-germany .intakegermany-card .course-title a {
+    font-size: 30px;
+}
+
+.intakes-germany .intakegermany-card .course-rank {
+    padding: 0;
+    margin: 0;
+}
+
+
+.cost-germany .costgermany-card {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.10);
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #fff;
+    position: relative;
+    padding: 0 20px;
+    /* height: 200px; */
+    border-left: 3px solid #3498db;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cost-germany .costgermany-card .course-title {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.cost-germany .costgermany-card:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* border-left: 3px solid #FF630E; */
+}
+
+.cost-germany .with-line {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cost-germany .with-line::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background-color: black;
+    /* Change color if needed */
+    margin-right: 10px;
+}
+
+.what-we-offer-section.overlay {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.what-we-offer-section.overlay:before {
+    background-color: transparent
+}
+
+.what-we-offer-section .offer-content-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.what-we-offer-section.overlay .offer-content-wrapper .discount-img {
+
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 10px 10px; */
+}
+
+.what-we-offer-section.overlay .container {
+    padding: 0px;
+    width: 100%;
+}
+
+.what-we-offer-section .discount-cont {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*--------------------------------------------------------------
+    laptop
+---------------------------------------------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .cost-germany .costgermany-card .course-title {
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .cost-germany .costgermany-card .course-title {
+        margin: 10px 0;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .page-banner-area .banner-content .flex-fill a {
+
+        padding: 10px 30px;
+
+    }
+
+    .banner-content .banner-span {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .what-we-offer-section .discount-cont {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px 15px;
+    }
+
+    .cost-germany .costgermany-card {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .cost-germany .costgermany-card .course-title {
+        margin: 0;
+        font-size: 15px;
+    }
+
+}

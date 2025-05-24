@@ -19,6 +19,7 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
+
     <link rel="stylesheet" href="assets/css/germany.css" />
 
     <!-- Prevent FOUC -->
@@ -34,19 +35,13 @@
     <script id="head-loader">
         fetch('common-files/head-common.html')
             .then(res => res.text())
-            .then(data => {
-                const fragment = document.createRange().createContextualFragment(data);
-                document.head.prepend(fragment);
-
-                window.addEventListener('load', () => {
-                    document.body.style.opacity = '1';
-                    document.body.style.visibility = 'visible';
-                });
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
             })
             .catch(err => {
                 console.error('Head load error:', err);
-                document.body.style.opacity = '1';
-                document.body.style.visibility = 'visible';
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
             });
     </script>
 
@@ -61,32 +56,32 @@
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <div id="common-body"></div>
+<div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('common-body').innerHTML = data;
-                // Reinitialize any scripts if needed
-            })
-            .catch(err => console.error('Failed to load body content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('common-body').innerHTML = html)
+            .catch(err => console.error('Error loading body:', err));
     </script>
 
-    <section class="page-banner-area">
+    <section class="page-banner-area banner-study">
         <div class="container">
             <div class="row">
                 <!--start heading-->
                 <div class="col-lg-12">
                     <div class="banner-content text-center">
-                        <h1>Germany</h1>
-                        <p><a href="home.html">Home</a> <span> > </span>Germany</p>
+                        <h1>Germany : <span class="banner-span">Innovative education, technology,
+                                and endless
+                                career potential.</span> </h1>
+                        <!-- <p><a href="home.html">Home</a> <span> > </span>Germany</p> -->
+                        <div class=" flex-fill text-center">
+                            <a href="contact-us.html">Book Free Consultation</a>
+                        </div>
                     </div>
                 </div>
                 <!--end heading-->
@@ -147,138 +142,6 @@
                                     during studies.</li>
                             </ul>
                             <br>
-                            <h4 class="service-title pb-2">Germany’s Top Universities/Institutes</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>No.</th>
-                                            <th>Institution</th>
-                                            <th>QS Ranking 2025 (Globally)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Technical University of Munich (TUM)</td>
-                                            <td>28</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Ludwig Maximilian University of Munich (LMU)</td>
-                                            <td>59</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Universität Heidelberg</td>
-                                            <td>84</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Free University of Berlin</td>
-                                            <td>97</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>RWTH Aachen University</td>
-                                            <td>99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Ruprecht Karl University of Heidelberg</td>
-                                            <td>84</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Karlsruhe Institute of Technology (KIT)</td>
-                                            <td>102</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Humboldt University of Berlin</td>
-                                            <td>126</td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>Technische Universität Berlin (TU Berlin)</td>
-                                            <td>147</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Universität Hamburg</td>
-                                            <td>212</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="service-title pb-2">Intakes in Germany</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Intake</th>
-                                            <th>Duration</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Winter Intake</td>
-                                            <td>September to October</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Summer Intake</td>
-                                            <td>April/May</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="service-title pb-2">Approximate Studying Cost in Germany</h4>
-                            <div class="table-container">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>S. No.</th>
-                                            <th>Germany Study Program</th>
-                                            <th>Average Annual Fees (in Rupees)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Undergraduate Bachelor’s degree</td>
-                                            <td>Rs. 5,00,000 to Rs. 19,00,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Postgraduate Master's degree</td>
-                                            <td>Rs. 11,00,000 to Rs. 25,00,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Doctoral degree</td>
-                                            <td>Rs. 8,00,000 to Rs. 14,00,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p><i>*Public universities charge no tuition fees for most programs, but semester
-                                        contributions may apply (INR 9,460–37,840 / €100–400)</i></p>
-                            </div>
-
-                            <h4 class="service-title pb-2">Scholarships Offered in Germany</h4>
-                            <ul>
-                                <li><strong>Expatrio Scholarship:</strong> Up to €15,000 for international students
-                                    based on a video application.</li>
-                                <li><strong>DAAD Scholarship Programs:</strong> Fully funded with monthly stipends of
-                                    €992 (graduates) and €1,300 (PhD).</li>
-                                <li><strong>Heinrich Böll Foundation Scholarships:</strong> Open to Master's and PhD
-                                    students in all fields.</li>
-                                <li><strong>Erasmus+ Scholarship Programs:</strong> For students in short-cycle to
-                                    doctoral programs in exchange programs.</li>
-                                <li><strong>StipendiumPlus:</strong> Includes base stipend up to €855, health insurance,
-                                    child support, and study expenses.</li>
-                            </ul>
 
                         </div>
                     </div>
@@ -289,43 +152,25 @@
                         <!--start widget-->
 
                         <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Study Abroad</h4>
-                            <ul class="widget-list">
-                                <li><a href="uk.html"><i class="fa fa-angle-right"></i> UK</a></li>
-                                <li><a href="usa.html"><i class="fa fa-angle-right"></i> USA</a></li>
-                                <li><a href="canada.html"><i class="fa fa-angle-right"></i> Canada</a></li>
-                                <li><a href="new-zealand.html"><i class="fa fa-angle-right"></i> NewZealand</a></li>
-                                <li><a href="ireland.html"><i class="fa fa-angle-right"></i>Ireland</a></li>
-                                <li><a href="germany.html"><i class="fa fa-angle-right"></i> Germany</a></li>
-                            </ul>
-                        </div>
+                        <div id="studyabroad-widget"></div>
+                        <script>
+                            fetch('common-files/studyabroad-widget.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('studyabroad-widget').innerHTML = html)
+                                .catch(err => console.error('Error loading widget:', err));
+                        </script>
+
                         <!--end widget-->
+
                         <!--start widget-->
-                        <div class="menu-list widget">
-                            <h4>Enquire Now</h4>
-                            <form action="https://g3beducation.com/send" method="post">
-                                <input type="text" name="name" placeholder="Your Name *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="email" placeholder="Email Address *"
-                                    class="form-control service-form" required>
-                                <input type="number" name="mobile" placeholder="Mobile *"
-                                    class="form-control service-form" required>
-                                <input type="text" name="subject" placeholder="Subject"
-                                    class="form-control service-form">
-                                <textarea rows="4" name="message" placeholder="Write Your Message "
-                                    class="form-control service-form"></textarea>
-                                <div class="form-group mb-3">
-                                    <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
-                                        data-sitekey="6LfQdAErAAAAACpa9s2-YdDUWn0jRHecij5MeHkR"></div>
-                                    <span id="captcha" class="text-danger"></span>
-                                </div>
-                                <div class="submit-btn">
-                                    <button type="submit" name="submit" value="submit" id="submitContact"
-                                        class="all-ser-btn btn radius-xl btn-lg">Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                        <div id="enquireform"></div>
+                        <script>
+                            fetch('common-files/enquireform.html')
+                                .then(res => res.text())
+                                .then(html => document.getElementById('enquireform').innerHTML = html)
+                                .catch(err => console.error('Error loading form:', err));
+                        </script>
+
                         <!--end widget-->
 
                     </div>
@@ -333,8 +178,246 @@
                 <!--end sidebar-->
             </div>
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="service-title pb-4 pt-4">Germany’s Top Universities/Institutes</h4>
+                    <div class="row top-germany ">
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Technical University of Munich (TUM)</a>
 
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 28</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Ludwig Maximilian University of Munich (LMU)</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 59</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Universität Heidelberg </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 84</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Free University of Berlin </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 97</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">RWTH Aachen University </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 99</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Ruprecht Karl University of Heidelberg </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 84</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Karlsruhe Institute of Technology (KIT) </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 102</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Humboldt University of Berlin </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 126
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Technische Universität Berlin (TU Berlin) </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 147</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="topgermanycourse-card">
+                                <div class="germanyimage">
+                                    <img src="/assets/images/logos/1.png" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Universität Hamburg </a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 (Globally) : 212</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <section class=" what-we-offer-section overlay ">
+                        <div class="container">
+                            <div class=" offer-content-wrapper row">
+                                <div class="col-xl-5 col-lg-6 d-block d-md-none d-lg-block">
+                                    <div class="discount-img" style="height: 100%;">
+                                        <img src="/assets/images/scholarship-germany.webp" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-6 col-md-12  discount-cont whatweoffer">
+                                    <div>
+
+                                        <h2>Scholarships Offered in Germany</h2>
+
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Expatrio Scholarship:</b> Up to €15,000 for international students
+                                            based on a video application.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>DAAD Scholarship Programs:</b> Fully funded with monthly stipends of
+                                            €992 (graduates) and €1,300 (PhD).
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Heinrich Böll Foundation Scholarships:</b> Open to Master's and PhD
+                                            students in all fields.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Erasmus+ Scholarship Programs:</b> For students in short-cycle to
+                                            doctoral programs in exchange programs.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>StipendiumPlus:</b> Includes base stipend up to €855, health insurance,
+                                            child support, and study expenses.
+                                        </h6>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h4 class="service-title pb-4 pt-4">Intakes in Germany</h4>
+                    <div class="row intakes-germany ">
+                        <div class="col-lg-6">
+                            <div class="intakegermany-card">
+                                <h2 class="intakenum">
+                                    01
+                                </h2>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Winter Intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : September to October</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="intakegermany-card">
+                                <h2 class="intakenum">
+                                    02
+                                </h2>
+                                <h3 class="course-title">
+                                    <a href="germany.html">Summer intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : April/May
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row cost-germany pt-4">
+                        <div class="col-lg-4">
+                            <h6 class="with-line">Choose your plan</h6>
+                            <h4 class="service-title ">Approximate Studying Cost in the germany</h4>
+                            <p>Enhance your team communication with the best pricing plan and available in the market.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="costgermany-card">
+                                        <h3 class="course-title">
+                                            <a href="germany.html">Undergraduate Bachelor’s degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 5,00,000 to Rs. 19,00,000
+                                            </strong>
+
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costgermany-card">
+                                        <h3 class="course-title">
+                                            <a href="germany.html">Postgraduate Master's degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 11,00,000 to Rs. 25,00,000
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costgermany-card">
+                                        <h3 class="course-title">
+                                            <a href="germany.html">Doctoral degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 8,00,000 to Rs. 14,00,000
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><i>*Public universities charge no tuition fees for most programs, but semester
+                                    contributions may apply (INR 9,460–37,840 / €100–400)</i></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!--end blog area-->
@@ -342,12 +425,11 @@
     <div id="footer"></div>
     <script>
         fetch('common-files/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load footer content:', err));
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -385,15 +467,12 @@
     <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Load shared scripts -->
 <div id="scripts"></div>
 <script>
     fetch('common-files/scripts.html')
         .then(res => res.text())
-        .then(data => {
-            document.getElementById('scripts').innerHTML = data;
-            // Initialize any required scripts if needed
-        });
+        .then(html => document.getElementById('scripts').innerHTML = html)
+        .catch(err => console.error('Error loading scripts:', err));
 </script>
 
 </html>
