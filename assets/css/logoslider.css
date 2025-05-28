@@ -27,3 +27,32 @@
     /* width: 250px; */
     margin: 0 50px;
 }
+
+.slider .slide img {
+    height: 100px;
+    ;
+    object-fit: contain;
+}
+
+@media (max-width: 576px) {
+    .slider {
+        height: 50px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: auto;
+    }
+
+
+    .slider .slide {
+        height: 50px;
+        /* width: 250px; */
+        margin: 0 50px;
+    }
+
+    .slider .slide img {
+        height: 50px;
+        object-fit: contain;
+    }
+
+}
