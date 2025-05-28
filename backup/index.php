@@ -326,7 +326,7 @@
             <div class="discount-wrap three">
                 <!--start discount-image-->
                 <div class="discount-img">
-                    <img src="/assets/images/disct-img.webp" class="img-fluid" alt="image">
+                    <img src="assets/images/disct-img.webp" class="img-fluid" alt="image">
                 </div>
                 <!--end discount-image-->
                 <!--start discount-content-->
@@ -841,7 +841,7 @@
             <div class="discount-wrap">
                 <!--start discount-image-->
                 <div class="discount-img">
-                    <img src="/assets/images/img-1.webp" class="img-fluid" alt="image">
+                    <img src="assets/images/img-1.webp" class="img-fluid" alt="image">
                 </div>
                 <!--end discount-image-->
                 <!--start discount-content-->

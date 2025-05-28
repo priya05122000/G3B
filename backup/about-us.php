@@ -109,12 +109,12 @@
                 <!--start about-img-->
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="/assets/images/abt/abt-1.webp" class="img-fluid">
+                        <img src="assets/images/abt/abt-1.webp" class="img-fluid">
                         <div class="about-img-inner">
-                            <img src="/assets/images/abt/abt-2.webp" class="img-fluid">
+                            <img src="assets/images/abt/abt-2.webp" class="img-fluid">
                         </div>
                         <div class="about-img-two">
-                            <img src="/assets/images/abt/abt-3.webp" class="img-fluid">
+                            <img src="assets/images/abt/abt-3.webp" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                 <div class="col-lg-4">
                     <div class="choose-single three">
                         <div class="why-choose-icon three">
-                            <img src="/assets/images/vision.webp">
+                            <img src="assets/images/vision.webp">
                         </div>
                         <div class="why-choose-cont three">
                             <h3>Our Vision</h3>
@@ -186,7 +186,7 @@
                 <div class="col-lg-4">
                     <div class="choose-single three">
                         <div class="why-choose-icon three">
-                            <img src="/assets/images/mission.webp">
+                            <img src="assets/images/mission.webp">
                         </div>
                         <div class="why-choose-cont three">
                             <h3>Our Mission</h3>
@@ -202,7 +202,7 @@
                 <div class="col-lg-4">
                     <div class="choose-single three">
                         <div class="why-choose-icon three">
-                            <img src="/assets/images/value.webp">
+                            <img src="assets/images/value.webp">
                         </div>
                         <div class="why-choose-cont three">
                             <h3>Our Value</h3>
@@ -224,7 +224,7 @@
                     <div class="about-img two">
                         <div class=" text-center">
                             <div class="video-player d-table">
-                                <img src="/assets/images/abt/abt-4.webp" class="img-fluid">
+                                <img src="assets/images/abt/abt-4.webp" class="img-fluid">
                             </div>
                         </div>
                     </div>

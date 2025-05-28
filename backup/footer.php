@@ -1,7 +1,7 @@
 <!--start footer-area-->
 <footer id="footer-area">
     <a href="https://wa.me/918928659569" target="_blank" class="floatwhatsapp">
-        <img src="/assets/images/whatsapp-icon.webp" class="my-float1" alt=""></a>
+        <img src="assets/images/whatsapp-icon.webp" class="my-float1" alt=""></a>
     <!--start footer top area-->
     <div class="footer-top-area">
         <div class="container">
@@ -9,7 +9,7 @@
                 <!--start footer widget-->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget logo">
-                        <a href="#"><img src="/assets/images/logo-white-1.webp" alt="logo"></a>
+                        <a href="#"><img src="assets/images/logo-white-1.webp" alt="logo"></a>
                         <div class="footer-about-description">
                             <p>At G3B Education, we specialize in making the dream of studying abroad a reality for aspiring students. With a passion for transforming ambitions into success stories.</p>
                         </div>

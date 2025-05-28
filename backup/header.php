@@ -46,7 +46,7 @@
                 <div class="main-menu-wrap">
                     <!--start site logo-->
                     <div class="site-logo">
-                        <a class="logo" href="index.php"><img src="/assets/images/logo.webp" alt="logo"></a>
+                        <a class="logo" href="index.php"><img src="assets/images/logo.webp" alt="logo"></a>
 
                     </div>
                     <!--end site logo-->
