@@ -29,8 +29,7 @@
 }
 
 .slider .slide img {
-    height: 100px;
-    ;
+    height: 100px;;
     object-fit: contain;
 }
 
