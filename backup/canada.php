@@ -165,7 +165,7 @@
                         <!--start widget-->
                         <div class="menu-list widget">
                             <h4>Enquire Now</h4>
-                            <form action="send" method="post">
+                            <form action="send.php" method="post">
                                 <input type="text" name="name" placeholder="Your Name *" class="form-control service-form" required>
                                 <input type="text" name="email" placeholder="Email Address *" class="form-control service-form" required>
                                 <input type="number" name="mobile" placeholder="Mobile *" class="form-control service-form" required>

@@ -1,7 +1,7 @@
 <div class="contact-form">
     <!-- <form action="https://g3beducation.com/send" method="post"> -->
 
-    <form action="send" method="post">
+    <form action="/G3B/send.php"  method="POST" id="contact-form">
         <div class="row">
             <div class="col-lg-6  mb-lg-0">
                 <input type="text" name="first_name" placeholder="First Name *" class="form-control" required>
@@ -35,13 +35,10 @@
 
         <textarea rows="4" name="message" placeholder="Write Your Message" class="form-control"></textarea>
 
-        <!-- Google reCAPTCHA -->
         <div class="form-group">
-            <div class="g-recaptcha" name="g-recaptcha" id="rcaptcha"
-                data-sitekey="6LdTVEMrAAAAAMcNctRNu1hLa3p1QVSCWqdMpUNp"></div>
+            <div class="g-recaptcha" data-sitekey="6Lf6mk0rAAAAAIcBu5vwcn_I-NgSRUG9ntDtZuzv"></div>
             <span id="captcha" class="text-danger"></span>
         </div>
-
 
         <div class="submit-btn">
             <button type="submit" name="submit" value="submit" id="submitContact"

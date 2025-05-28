@@ -1,62 +1,91 @@
 <?php
-if (isset($_POST['submit'])) {
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Google reCAPTCHA API keys settings
-    $secretKey = '6LfQdAErAAAAAKElF0bB0suAWzLT7-6bXgLBAaAO';
+require 'vendor/autoload.php';
 
-    // Validate reCAPTCHA checkbox
-    if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+// Sanitize input
+function sanitizeInput($input) {
+    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+}
 
-        // Verify the reCAPTCHA API response
-        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $_POST['g-recaptcha-response']);
+// Validate email
+function isValidEmail($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
 
-        // Decode JSON data of API response
-        $responseData = json_decode($verifyResponse);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // reCAPTCHA verification
+    $recaptchaSecret = '6Lf6mk0rAAAAAM6qjnalQOcJjyIQavPRdzy5CWlN';
+    $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
-        if ($responseData->success) {
+    if (empty($recaptchaResponse)) {
+        header('Location: /G3B/contact-us.html?status=captcha_missing');
+        exit();
+    }
 
-            $to = 'admissions.g3beducation@gmail.com';
-            $subject = 'Contact Us - Form Enquiry';
+    $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+    $captchaSuccess = json_decode($verify);
 
-            // Build email content
-            $data = '<table border="1" bordercolor="#ccc" align="center" width="650" style="width:650px;" cellpadding="10" cellspacing="0">';
-            $data .= '<tr><td colspan="2" align="center" style="font-weight: bolder;font-size: 16px">Contact Us Enquiry Details</td></tr>';
-            $data .= '<tr><td>Name:</td><td>' . htmlspecialchars($_POST['name']) . '</td></tr>';
-            $data .= '<tr><td>Email ID:</td><td>' . htmlspecialchars($_POST['email']) . '</td></tr>';
-            $data .= '<tr><td>Phone No:</td><td>' . htmlspecialchars($_POST['mobile']) . '</td></tr>';
-            $data .= '<tr><td>Subject:</td><td>' . htmlspecialchars($_POST['subject']) . '</td></tr>';
-            $data .= '<tr><td>Message:</td><td>' . htmlspecialchars($_POST['message']) . '</td></tr>';
-            $data .= '<tr><td>IP Address:</td><td>' . $_SERVER['REMOTE_ADDR'] . '</td></tr>';
-            $data .= '</table>';
+    if (!$captchaSuccess->success) {
+        header('Location: /G3B/contact-us.html?status=captcha_failed');
+        exit();
+    }
 
-            $message = $data;
+    // Get and sanitize form input
+    $first_name = sanitizeInput($_POST['first_name']);
+    $last_name = sanitizeInput($_POST['last_name']);
+    $email = sanitizeInput($_POST['email']);
+    $phone = sanitizeInput($_POST['phone']);
+    $destination = sanitizeInput($_POST['destination']);
+    $subject = sanitizeInput($_POST['subject']);
+    $message = sanitizeInput($_POST['message']);
 
-            // Email headers
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: Contact Us <no-reply@g3beducation.com>' . "\r\n";
+    if (!isValidEmail($email)) {
+        header('Location: /G3B/contact-us.html?status=invalidemail');
+        exit();
+    }
 
-            // Send email
-            if (mail($to, $subject, $message, $headers)) {
-                header('Location: thank-you.php');
-                exit();
-            } else {
-                header('Location: failed.php');
-                exit();
-            }
-        } else {
-            // Redirect in case of reCAPTCHA failure
-            header('Location: captcha-failed.php');
-            exit();
-        }
-    } else {
-        // Redirect if reCAPTCHA response is not set
-        header('Location: captcha-missing.php');
+    $mail = new PHPMailer(true);
+    $mail->SMTPDebug = 2; // Enable verbose debug output
+    $mail->Debugoutput = 'html';
+
+    try {
+        // SMTP Configuration
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'npriyanagendran2000@gmail.com';
+        $mail->Password = 'epyvwpjqtmnfrzhf'; // Use App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // Recipients
+        $mail->setFrom('npriyanagendran2000@gmail.com', 'G3B Website');
+        $mail->addAddress('admissions.g3beducation@gmail.com', 'G3B Admissions');
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission: ' . $subject;
+        $mail->Body = "
+            <h2>Contact Form Details</h2>
+            <p><strong>Name:</strong> {$first_name} {$last_name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Phone:</strong> {$phone}</p>
+            <p><strong>Destination:</strong> {$destination}</p>
+            <p><strong>Subject:</strong> {$subject}</p>
+            <p><strong>Message:</strong><br>{$message}</p>
+        ";
+
+        $mail->send();
+        header('Location: /G3B/contact-us.html?status=success');
+        exit();
+    } catch (Exception $e) {
+        error_log("Mailer Error: " . $mail->ErrorInfo);
+        header('Location: /G3B/contact-us.html?status=error');
         exit();
     }
 } else {
-    // Redirect if the form was not submitted
-    header('Location: form-error.php');
+    header('Location: /G3B/contact-us.html');
     exit();
 }
-?>

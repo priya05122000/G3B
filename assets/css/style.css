@@ -1478,6 +1478,12 @@ p {
     padding: 0 0 20px
 }
 
+.discount-area-two .discount-wrap.three .home-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .discount-wrap {
     /* background-color: #130F40; */
     /* margin-top: -210px; */

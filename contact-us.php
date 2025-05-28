@@ -158,7 +158,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <form action="send" method="post">
+                        <form action="send.php" method="post">
                             <input type="text" name="name" placeholder="Your Name *" class="form-control" required>
                             <input type="text" name="email" placeholder="Email Address *" class="form-control" required>
                             <input type="number" name="mobile" placeholder="Mobile *" class="form-control" required>
