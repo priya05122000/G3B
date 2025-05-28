@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -19,7 +18,10 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
-    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/logoslider.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
 
 
     <!-- Prevent FOUC -->
@@ -33,17 +35,17 @@
 
     <!-- Load shared head content -->
     <script id="head-loader">
-    fetch('common-files/head-common.html')
-        .then(res => res.text())
-        .then(html => {
-            document.head.prepend(document.createRange().createContextualFragment(html));
-            window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
-        })
-        .catch(err => {
-            console.error('Head load error:', err);
-            Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
-        });
-</script>
+        fetch('common-files/head-common.html')
+            .then(res => res.text())
+            .then(html => {
+                document.head.prepend(document.createRange().createContextualFragment(html));
+                window.addEventListener('load', () => Object.assign(document.body.style, { opacity: '1', visibility: 'visible' }));
+            })
+            .catch(err => {
+                console.error('Head load error:', err);
+                Object.assign(document.body.style, { opacity: '1', visibility: 'visible' });
+            });
+    </script>
 
     <title>G3B Education - Unlock Your Study Abroad Potential</title>
     <meta name="keywords"
@@ -55,72 +57,192 @@
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
+    <div id="common-body"></div>
+    <script>
+        fetch('common-files/common-body.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('common-body').innerHTML = data;
+                // Reinitialize any scripts if needed
+            })
+            .catch(err => console.error('Failed to load body content:', err));
 
-     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-    </noscript>
-
-<div id="common-body"></div>
-<script>
-    fetch('common-files/common-body.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('common-body').innerHTML = html)
-        .catch(err => console.error('Error loading body:', err));
-</script>
+    </script>
 
     <!--start hero area-->
-    <section class="hero-area">
+    <!-- <section class="hero-area">
         <div class="container">
             <div class="caption-content text-center">
                 <h4>Welcome To G3B Education</h4>
                 <h2> Your Pathway to Global Learning and Success</h2>
-                <!-- <p>We are providing high-quality online courses to improve your skill. Our all instructors are highly experienced and experts.</p> -->
                 <p>We empower students with comprehensive guidance and resources, enabling them to acquire foreign
                     languages and pursue quality education abroad with all the solutions under the same roof.</p>
-                <ul class="responsive-list d-flex flex-wrap justify-content-center">
-                    <li class="pb-4 flex-fill text-center">
-                        <a href="contact-us.html">Contact Us</a>
-                    </li>
-                    <li class="flex-fill text-center">
-                        <a class="btn-bg" href="personalized-counseling.html">Our Services</a>
+                <ul class="responsive-list d-flex   justify-content-center">
+                    <li class=" flex-fill text-center">
+                        <a href="contact-us.html">Book Free Consultation</a>
                     </li>
                 </ul>
-
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section class="hero-area item1">
+                    <div class="container">
+                        <!-- <img src="/assets/images/home/img-1.webp" class="d-block w-100" alt="Slide 1"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>Study Abroad Made Easy – End-to-End Guidance You Can Trust</h2>
+                            <p>From Application to Arrival – Complete Study Abroad Support Under One Roof
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item ">
+                <section class=" hero-area item2">
+                    <div class="container">
+                        <!-- <img src="images/slide2.webp" class="d-block w-100" alt="Slide 2"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>Top-Rated Coaching for IELTS, TOEFL, GRE, GMAT & SAT
+                            </h2>
+                            <p>Achieve Your Dream Scores with Expert Exam Coaching
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item">
+                <section class=" hero-area item3">
+                    <div class="container ">
+                        <!-- <img src="images/slide2.webp" class="d-block w-100" alt="Slide 2"> -->
+                        <div class="caption-content text-center py-5">
+                            <h4>Welcome To G3B Education</h4>
+                            <h2>Your Trusted Gateway to Study Abroad Success</h2>
+                            <p> Start Your International Education Journey with Expert Guidance
+                            </p>
+                            <ul class="responsive-list d-flex justify-content-center">
+                                <li class="flex-fill text-center">
+                                    <a href="contact-us.html">Book Free Consultation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
     <!--end hero area-->
+
     <!--start category area-->
     <section class="discount-area-two">
         <div class="container">
-            <div class="discount-wrap three">
-                <!--start discount-image-->
-                <div class="discount-img">
-                    <img src="assets/images/disct-img.webp" class="img-fluid" alt="image">
+            <div class="discount-wrap three row">
+
+                <div class="col-xl-6 col-lg-5" style="height: 100%;">
+                    <!--start discount-image-->
+                    <div class="discount-img">
+                        <img src="assets/images/home/home-about.webp" class="img-fluid" alt="image">
+                    </div>
+                    <!--end discount-image-->
                 </div>
-                <!--end discount-image-->
-                <!--start discount-content-->
-                <div class="discount-cont three">
-                    <h4>About Us</h4>
-                    <h2 style="font-size: 30px;line-height: 36px;">Welcome to G3B Education – Your Gateway to Global
-                        Learning Opportunities</h2>
-                    <p style="    color: #696969;">At G3B Education, we specialize in making the dream of studying
-                        abroad a reality for aspiring students. With a passion for transforming ambitions into success
-                        stories, we provide personalized support and expert guidance to help you achieve your academic
-                        and professional goals.</p>
-                    <div class="btn-default">
-                        <a href="about-us.html">Read More</a>
+
+                <div class="col-xl-6 col-lg-7">
+                    <!--start discount-content-->
+                    <div class="discount-cont three" style=" width: 100%;">
+                        <h4>About Us</h4>
+                        <h2 style="font-size: 30px;line-height: 36px;">Welcome to G3B Education – Your Gateway to
+                            Global
+                            Learning Opportunities</h2>
+                        <p style="    color: #696969;">At G3B Education, we specialize in making the dream of
+                            studying
+                            abroad a reality for aspiring students. With a passion for transforming ambitions into
+                            success
+                            stories, we provide personalized support and expert guidance to help you achieve your
+                            academic
+                            and professional goals.</p>
+                        <div class="btn-default">
+                            <a href="about-us.html">Read More</a>
+                        </div>
+                    </div>
+                    <!-- end discount-content -->
+                </div>
+
+
+            </div>
+
+            <div class="sec-heading text-center" style="margin-top: 5%;">
+                <p><b>Join us and embark on a transformative journey towards a bright and successful
+                        future!</b></p>
+            </div>
+
+            <div class="row about-counter-wrap justify-content-center">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>100</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Students Counselled</p>
+                        </div>
                     </div>
                 </div>
-                <!-- end discount-content -->
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>700</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Universities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="counter-single text-center">
+                        <div class="counter-number ">
+                            <h2><span>40</span>+</h2>
+                        </div>
+                        <div class="counter-title">
+                            <p class="counter-sen">Test Preparation</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -129,23 +251,23 @@
         <div class="container">
             <div class="row">
                 <!--start about-img-->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="about-img-four">
-                        <img src="assets/images/destination-1.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-1.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
                 <!--start about-img-->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="about-img-four margin">
-                        <img src="assets/images/destination-2.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-2.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
                 <!--start about-img-->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="about-img-four">
-                        <img src="assets/images/destination-3.webp" class="img-fluid" alt="image">
+                        <img src="assets/images/home/destination-3.webp" class="img-fluid" alt="image">
                     </div>
                 </div>
                 <!--end about-img-->
@@ -156,92 +278,80 @@
                     <div class="sec-heading text-center">
                         <h2>Explore Your Dream Destination with G3B Education</h2>
                         <p class="mb-2">At G3B Education, we open doors to a world of opportunities, enabling you to
-                            pursue your academic aspirations in top destinations like the USA, UK, Canada, Australia,
+                            pursue your academic aspirations in top destinations like the USA, UK, Canada,
+                            Australia,
                             Europe, Asia, and beyond.</p>
-                        <p class="mb-2">As your trusted gateway to global learning, we are committed to making the dream
+                        <p class="mb-2">As your trusted gateway to global learning, we are committed to making the
+                            dream
                             of studying abroad a reality for ambitious students. Our dedicated team combines
-                            personalized guidance and years of expertise to simplify the complexities of international
-                            education. From choosing the right course and institution to navigating the application and
+                            personalized guidance and years of expertise to simplify the complexities of
+                            international
+                            education. From choosing the right course and institution to navigating the application
+                            and
                             visa processes, we’re with you every step of the way.</p>
                         <p class="mb-2">Through our collaborations with leading universities and educational
                             institutions worldwide, we provide access to prestigious programs that align with your
                             academic interests and career goals. At G3B Education, we don't just help you study
                             abroad—we help you excel and thrive in a global environment.</p>
-                        <p class="">Join us and embark on a transformative journey towards a bright and successful
-                            future!</p>
+                        <!-- <p class="">Join us and embark on a transformative journey towards a bright and successful
+                            future!</p> -->
                     </div>
                 </div>
                 <!--end sec-heading-->
             </div>
-            <div class="row about-counter-wrap justify-content-center">
-                <!--start counter-single-->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="counter-single text-center">
-                        <div class="counter-number ">
-                            <h2><span>100</span>+</h2>
-                        </div>
-                        <div class="counter-title">
-                            <p class="counter-sen">Students Counselled</p>
-                        </div>
-                    </div>
+
+        </div>
+    </section>
+
+    <!--start discount area-->
+    <section class="discount-area discount-form">
+        <div class="container">
+            <div class="discount-wrap row">
+                <div class="col-lg-5 col-xl-5 discount-img girl">
+                    <!-- <div class="discount-img"> -->
+                    <img src="/assets/images/home/home-form.webp" class="img-fluid" alt="image">
+                    <!-- </div> -->
                 </div>
-                <!--end counter-single-->
-                <!--start counter-single-->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="counter-single text-center">
-                        <div class="counter-number ">
-                            <h2><span>700</span>+</h2>
-                        </div>
-                        <div class="counter-title">
-                            <p class="counter-sen">Universities</p>
-                        </div>
-                    </div>
+                <div class="col-xl-7 col-lg-7 col-md-12 discount-cont whatweoffer">
+
+                    <div id="contactusform"></div>
+                    <script>
+                        fetch('common-files/contactusform.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('contactusform').innerHTML = data;
+                                // Reinitialize any scripts if needed
+                            })
+                            .catch(err => console.error('Failed to load body content:', err));
+                    </script>
+
                 </div>
-                <!--end counter-single-->
-                <!--start counter-single-->
-                <!-- <div class="col-6 col-md-6 col-lg-3">
-                    <div class="counter-single text-center">
-                    <div class="counter-number ">
-                            <h2><span>100</span>+</h2>
-                        </div>
-                        <div class="counter-title">
-                            <p class="counter-sen">Success Rate</p>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="counter-single text-center">
-                        <div class="counter-number ">
-                            <h2><span>40</span>+</h2>
-                        </div>
-                        <div class="counter-title">
-                            <p class="counter-sen">Test Preparation</p>
-                        </div>
-                    </div>
-                </div>
-                <!--end counter-single-->
             </div>
         </div>
     </section>
+    <!--end discount-area-->
+
     <section class="why-choose-area bg-gray why-choose-us">
         <div class="container">
             <div class="row">
                 <!--start why choose heading-->
-                <div class="col-lg-4">
+                <div class="col-xl-4 col-lg-5">
                     <h2>Why Choose Us?</h2>
-                    <p>At G3B Education, we are committed to helping students achieve their academic and professional
-                        aspirations by offering world-class guidance and unwavering support. Here’s why students choose
-                        us as their trusted partner in their study abroad journey:</p>
+                    <p>At G3B Education, we are committed to helping students achieve their academic and
+                        professional
+                        aspirations by offering world-class guidance and unwavering support. Here’s why students
+                        choose
+                        us as their trusted partner in their study abroad journey.</p>
                     <div class="why-choose-btn pb-5">
-                        <a href="#">Contact Us</a>
+                        <a href="contact-us.html">Contact Us</a>
                     </div>
                 </div>
                 <!--end why choose heading-->
-                <div class="col-lg-8">
+                <div class="col-xl-8 col-lg-7">
                     <div class="row">
                         <!--start why choose single-->
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/1.webp" class="img-fluid" alt="image">
                                 </div>
@@ -253,8 +363,8 @@
                         </div>
                         <!--end why choose single-->
                         <!--start why choose single-->
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/2.webp" class="img-fluid" alt="image">
                                 </div>
@@ -266,8 +376,8 @@
                         </div>
                         <!--end why choose single-->
                         <!--start why choose single-->
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/3.webp" class="img-fluid" alt="image">
                                 </div>
@@ -279,8 +389,8 @@
                         </div>
                         <!--end why choose single-->
                         <!--start why choose single-->
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column ">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/4.webp" class="img-fluid" alt="image">
                                 </div>
@@ -291,8 +401,8 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/5.webp" class="img-fluid" alt="image">
                                 </div>
@@ -303,8 +413,8 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
-                            <div class="why-choose-single">
+                        <div class="col-md-6">
+                            <div class="why-choose-single d-flex flex-column">
                                 <div class="why-choose-icon">
                                     <img src="assets/images/icons/6.webp" class="img-fluid" alt="image">
                                 </div>
@@ -339,7 +449,7 @@
 
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="personalized-counseling.html">
@@ -348,12 +458,13 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="personalized-counseling.html" style="font-size: 21px;line-height: 26px;">
+                                <a href="personalized-counseling.html">
                                     Personalized Counseling</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
-                                    <li class="course-duration"><a href="personalized-counseling.html">Read More </a>
+                                    <li class="course-duration"><a href="personalized-counseling.html">Read More
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -362,7 +473,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="university-applications.html">
@@ -371,12 +482,13 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="university-applications.html" style="font-size: 21px;line-height: 26px;">
+                                <a href="university-applications.html">
                                     University Applications</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
-                                    <li class="course-duration"><a href="university-applications.html">Read More </a>
+                                    <li class="course-duration"><a href="university-applications.html">Read More
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -385,7 +497,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="test-preparation.html">
@@ -394,8 +506,7 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="test-preparation.html" style="font-size: 21px;line-height: 26px;"> Test
-                                    Preparation</a>
+                                <a href="test-preparation.html">Test Preparation</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -407,7 +518,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="visa-assistance.html">
@@ -416,8 +527,7 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="visa-assistance.html" style="font-size: 21px;line-height: 26px;"> Visa
-                                    Assistance</a>
+                                <a href="visa-assistance.html"> Visa Assistance</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -429,7 +539,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="scholarship-and-financial-guidance.html">
@@ -438,8 +548,8 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="scholarship-and-financial-guidance.html"
-                                    style="font-size: 21px;line-height: 26px;"> Scholarship and Financial Guidance</a>
+                                <a href="scholarship-and-financial-guidance.html"> Scholarship and Financial
+                                    Guidance</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -452,7 +562,7 @@
                 </div>
                 <!--end course card-->
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="pre-departure-and-post-arrival-support.html">
@@ -461,8 +571,7 @@
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="pre-departure-and-post-arrival-support.html"
-                                    style="font-size: 21px;line-height: 26px;">Pre-Departure and Post-Arrival
+                                <a href="pre-departure-and-post-arrival-support.html">Pre-Departure and Post-Arrival
                                     Support⁠</a>
                             </h3>
                             <div class="course-content-footer">
@@ -474,17 +583,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="comprehensive-study-abroad-solutions.html">
-                                <img src="assets/images/services/1.webp" class="img-fluid" alt="image">
+                                <img src="assets/images/services/1.webp" class="img-fluid" alt="image"
+                                    style="object-position: top;">
                             </a>
                         </div>
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
-                                <a href="comprehensive-study-abroad-solutions.html"
-                                    style="font-size: 21px;line-height: 26px;"> Comprehensive Study Abroad Solutions</a>
+                                <a href="comprehensive-study-abroad-solutions.html"> Comprehensive Study Abroad
+                                    Solutions</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -499,6 +609,53 @@
 
         </div>
     </section>
+
+    <!-- Logo Slider Section -->
+    <section class="logo-slider-area bg-white pt-5 pb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-12 sec-heading m-0 text-center text-xl-left">
+                    <h2>Our Trusted Partners</h2>
+                    <p class="trusted">We collaborate with leading institutions and organizations that share our vision
+                        for
+                        transformative education. Together, we deliver innovative learning solutions to empower students
+                        worldwide.</p>
+                </div>
+                <div class="col-xl-7 col-lg-12">
+                    <div style="display: flex; align-items: center;justify-content: center;">
+                        <div class="slider">
+                            <div class="slide-track">
+                                <div class="slide"><img
+                                        src="/assets/images/clg_logo/Shield_of_Imperial_College_London.svg.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/University-of-Oxford-logo-.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/MIT_Seal.webp" height="100" alt=""
+                                        style=" object-fit: contain;" /></div>
+                                <div class="slide"><img
+                                        src="/assets/images/clg_logo/Harvard_University_coat_of_arms.webp" height="100"
+                                        alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/The University of Auckland.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/university-of-otago.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/TUM-logo-.webp" height="100" alt=""
+                                        style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/LMU_Muenchen_Logo.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/TUDelft.webp" height="100" alt=""
+                                        style=" object-fit: contain;" /></div>
+                                <div class="slide"><img src="/assets/images/clg_logo/Amsterdamuniversitylogo.webp"
+                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="course-area pt-5">
         <div class="container">
@@ -515,7 +672,7 @@
                 <!--start course card-->
 
                 <!--start course card-->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="uk.html">
@@ -525,7 +682,7 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="uk.html" style="font-size: 21px;line-height: 26px;"> UK</a>
+                                <a href="uk.html">Study in the UK</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
@@ -537,7 +694,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="usa.html">
@@ -547,7 +704,7 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="usa.html" style="font-size: 21px;line-height: 26px;"> USA</a>
+                                <a href="usa.html">Study in the USA</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
@@ -559,7 +716,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="canada.html">
@@ -569,7 +726,7 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="canada.html" style="font-size: 21px;line-height: 26px;"> Canada</a>
+                                <a href="canada.html">Study in Canada</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
@@ -581,7 +738,7 @@
                 </div>
                 <!--end course card-->
                 <!--start course card-->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="new-zealand.html">
@@ -591,7 +748,8 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="new-zealand.html" style="font-size: 21px;line-height: 26px;"> NewZealand</a>
+                                <a href="new-zealand.html">Study in New
+                                    Zealand</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
@@ -603,7 +761,7 @@
                 </div>
                 <!--end course card-->
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="ireland.html">
@@ -613,7 +771,7 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="ireland.html" style="font-size: 21px;line-height: 26px;">Ireland⁠</a>
+                                <a href="ireland.html">Study in Ireland</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
@@ -623,7 +781,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="course-card">
                         <div class="course-thumbnail">
                             <a href="germany.html">
@@ -633,11 +791,31 @@
                         <div class="course-content d-flex justify-content-between align-items-center"
                             style="padding: 19px 20px;">
                             <h3 class="course-title my-0" style="line-height: 18px;">
-                                <a href="germany.html" style="font-size: 21px;line-height: 26px;"> Germany</a>
+                                <a href="germany.html">Study in Germany</a>
                             </h3>
                             <div class="course-content-footer my-0 pt-0 border-0 ">
                                 <ul>
                                     <li class="course-duration"><a href="germany.html">Read More </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <a href="netherlands.html">
+                                <img src="assets/images/study-abroad/netherland.webp" class="img-fluid" alt="image">
+                            </a>
+                        </div>
+                        <div class="course-content d-flex justify-content-between align-items-center"
+                            style="padding: 19px 20px;">
+                            <h3 class="course-title my-0" style="line-height: 18px;">
+                                <a href="netherlands.html">Study in Netherland</a>
+                            </h3>
+                            <div class="course-content-footer my-0 pt-0 border-0 ">
+                                <ul>
+                                    <li class="course-duration"><a href="netherlands.html">Read More </a> </li>
                                 </ul>
                             </div>
                         </div>
@@ -648,37 +826,43 @@
         </div>
     </section>
     <!--end course area-->
+
     <!--start discount area-->
-    <section class="discount-area overlay">
+    <section class="discount-area overlay whatwesection">
         <div class="container">
-            <div class="discount-wrap">
-                <!--start discount-image-->
-                <div class="discount-img">
-                    <img src="assets/images/img-1.webp" class="img-fluid" alt="image">
+            <div class="discount-wrap g3beducation row">
+                <div class="col-lg-5 col-xl-5 discount-img girl">
+                    <!-- <div class="discount-img"> -->
+                    <img src="/assets/images/home/whatweoffer.webp" class="img-fluid" alt="image">
+                    <!-- </div> -->
                 </div>
-                <!--end discount-image-->
-                <!--start discount-content-->
-                <div class="discount-cont">
+                <div class="col-xl-7 col-lg-12 col-md-12 discount-cont whatweoffer">
                     <h2>What We Offer at G3B Education</h2>
                     <p>At G3B Education, we aim to transform your dreams of studying abroad into reality with a
-                        comprehensive range of services tailored to meet your unique needs. Here's what we offer to
+                        comprehensive range of services tailored to meet your unique needs. Here's what we offer
+                        to
                         ensure your journey to global learning is seamless and successful:</p>
-                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Personalized
-                            Counseling:</b> Tailored guidance for academic and career goals.</h6>
-                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Top University
-                            Applications:</b> Assistance with selecting courses and applying to leading universities.
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                        <b>Personalized
+                            Counseling:</b> Tailored guidance for academic and career goals.
                     </h6>
-                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Test Preparation
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Top
+                            University
+                            Applications:</b> Assistance with selecting courses and applying to leading
+                        universities.
+                    </h6>
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Test
+                            Preparation
                             Support:</b> Resources for exams like IELTS, TOEFL, and GRE.</h6>
                     <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Visa
                             Assistance:</b> End-to-end support for a hassle-free visa process.</h6>
                     <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Financial
                             Guidance:</b> Insights on scholarships, loans, and financial aid.</h6>
-                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image"> <b>Post-Arrival
-                            Support:</b> Help with accommodation and settling into your new environment.</h6>
-
+                    <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                        <b>Post-Arrival
+                            Support:</b> Help with accommodation and settling into your new environment.
+                    </h6>
                 </div>
-                <!-- end discount-content -->
             </div>
         </div>
     </section>
@@ -688,7 +872,6 @@
     <!--start testimonial-area-->
     <section class="testimonial-area">
         <div class="container">
-
 
             <div class="row justify-content-center">
                 <!--start sec-heading-->
@@ -720,13 +903,14 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <div id="footer"></div>
-<script>
-    fetch('common-files/footer.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('footer').innerHTML = html)
-        .catch(err => console.error('Error loading footer:', err));
-</script>
+    <script>
+        fetch('common-files/footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(err => console.error('Error loading footer:', err));
+    </script>
 
 
 
@@ -751,6 +935,17 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <!--main js-->
     <script src="assets/js/custom.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const path = location.pathname.split("/").pop() || "home.html";
+            document.querySelectorAll(".mainmenu a").forEach(a =>
+                a.classList.toggle("active", a.getAttribute("href") === path)
+            );
+        });
+    </script>
+
 </body>
 
 <div id="scripts"></div>
@@ -761,7 +956,8 @@
         .catch(err => console.error('Error loading scripts:', err));
 </script>
 
-</html>
+<!-- <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
 <script>
     const reviewWrap = document.getElementById("reviewWrap");
@@ -778,41 +974,73 @@
 
     let people = [
         {
-            photo: 'url("assets/images/zaba.webp")',
+            photo: 'url("assets/images/reviewimages/review-1.webp")',
             name: "Zhaba Mohammed Shaikh",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: " I'm Zhaba Mohammed Shaikh currently pursuing my higher studies after graduation. Meeting Minal Kulkarni truly changed my perspective and thanks to her undying support and belief in me, made me choose my current path towards a new and better future, to pursue study abroad. Because of her faith in me I got more and more motivated to work harder towards my goal and I'm half way there in achieving it. I highly recommend her to anyone seeking a reliable and dedicated mentor if you want to study abroad and achieve your dreams."
+            description: "I'm Zhaba Mohammed Shaikh, currently pursuing higher studies. I highly recommend Minal Kulkarni to anyone seeking a reliable mentor to study abroad and achieve their dreams."
+            // description: " I'm Zhaba Mohammed Shaikh currently pursuing my higher studies after graduation. Meeting Minal Kulkarni truly changed my perspective and thanks to her undying support and belief in me, made me choose my current path towards a new and better future, to pursue study abroad. Because of her faith in me I got more and more motivated to work harder towards my goal and I'm half way there in achieving it. I highly recommend her to anyone seeking a reliable and dedicated mentor if you want to study abroad and achieve your dreams."
         },
 
         {
-            photo: 'url("assets/images/no-face.webp")',
-            name: "Yogesh Kadu",
+            photo: 'url("assets/images/reviewimages/review-7.webp")',
+            name: "Priya Natarajan",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "The team at G3B Education is amazing! They helped me navigate the application process for my study abroad program and provided invaluable insights about studying in Germany. I highly recommend their services to anyone planning to study overseas."
+            description: "Joining an Australian university was easy with G3B Education’s expert help. Visa process guidance was smooth. I also liked the spoken English training for interviews. Highly recommend them."
         },
 
         {
-            photo: 'url("assets/images/no-face.webp")',
-            name: "Amit",
+            photo: 'url("assets/images/reviewimages/review-6.webp")',
+            name: "Arjun Selvam",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
+            description: "G3B Education helped me with TOEFL test prep which was was excellent.Now I am living my dream of studying in Netherlands."
         },
 
         {
-            photo: 'url("assets/images/no-face.webp")',
-            name: " Pankaj Joshi",
+            photo: 'url("assets/images/reviewimages/review-5.webp")',
+            name: " Karthik Raj",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
+            description: "G3B Education assisted me with IELTS and UK visa procedure. They clarified everything and it was simple. I'm now studying in the UK!."
         },
-
-
+        {
+            photo: 'url("assets/images/reviewimages/review-4.webp")',
+            name: "Sagar Deshmukh",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "G3B Education helped me with GRE training to get a good score which led to studying at a good Canadian University."
+        },
 
         {
-            photo: 'url("assets/images/no-face.webp")',
-            name: "Rahul Kumar",
+            photo: 'url("assets/images/reviewimages/review-3.webp")',
+            name: "Priyanka Patil",
             profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
+            description: "Thanks to G3B Education for their Scholarship guidance. Now I am in a reputed Australian university. They also gave continuous support during my admission journey."
         },
+        {
+            photo: 'url("assets/images/reviewimages/review-2.webp")',
+            name: "Rohit Jadhav",
+            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            description: "With G3B Education’s help I got into one of the UK universities. Their Visa guidance was very helpful. Whole team was very professional and supportive."
+        },
+
+        // {
+        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
+        //     name: "Amit",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
+        // },
+
+        // {
+        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
+        //     name: " Pankaj Joshi",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
+        // },
+
+        // {
+        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
+        //     name: "Rahul Kumar",
+        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+        //     description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
+        // },
 
     ];
 
@@ -881,9 +1109,9 @@
     }
 
     function setNextCardLeft() {
-        if (currentPerson === 4) {
+        if (currentPerson === people.length - 1) {
             currentPerson = 0;
-            slide("left", currentPerson);
+            // slide("left", currentPerson);
         } else {
             currentPerson++;
         }
@@ -893,8 +1121,8 @@
 
     function setNextCardRight() {
         if (currentPerson === 0) {
-            currentPerson = 4;
-            slide("right", currentPerson);
+            currentPerson = people.length - 1;
+            // slide("right", currentPerson);
         } else {
             currentPerson--;
         }
@@ -905,27 +1133,31 @@
     leftArrow.addEventListener("click", setNextCardLeft);
     rightArrow.addEventListener("click", setNextCardRight);
 
-    surpriseMeBtn.addEventListener("click", () => {
-        if (chicken.style.opacity === "0") {
-            chicken.style.opacity = "1";
-            imgDiv.classList.add("move-head");
-            surpriseMeBtn.innerText = "Remove the chicken";
-            surpriseMeBtn.classList.remove("surprise-me-btn");
-            surpriseMeBtn.classList.add("hide-chicken-btn");
-            isChickenVisible = true;
-        } else if (chicken.style.opacity === "1") {
-            chicken.style.opacity = "0";
-            imgDiv.classList.remove("move-head");
-            surpriseMeBtn.innerText = "Surprise me";
-            surpriseMeBtn.classList.add("surprise-me-btn");
-            surpriseMeBtn.classList.remove("hide-chicken-btn");
-            isChickenVisible = false;
-        }
-    });
+    if (surpriseMeBtn) {
+
+        surpriseMeBtn.addEventListener("click", () => {
+            if (chicken.style.opacity === "0") {
+                chicken.style.opacity = "1";
+                imgDiv.classList.add("move-head");
+                surpriseMeBtn.innerText = "Remove the chicken";
+                surpriseMeBtn.classList.remove("surprise-me-btn");
+                surpriseMeBtn.classList.add("hide-chicken-btn");
+                isChickenVisible = true;
+            } else if (chicken.style.opacity === "1") {
+                chicken.style.opacity = "0";
+                imgDiv.classList.remove("move-head");
+                surpriseMeBtn.innerText = "Surprise me";
+                surpriseMeBtn.classList.add("surprise-me-btn");
+                surpriseMeBtn.classList.remove("hide-chicken-btn");
+                isChickenVisible = false;
+            }
+        });
+
+    }
 
     window.addEventListener("resize", () => {
         description.style.height = "100%";
     });
 </script>
 
-<script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</html>

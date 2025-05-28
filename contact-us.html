@@ -21,6 +21,8 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Prevent FOUC -->
     <style>
@@ -62,7 +64,7 @@
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
