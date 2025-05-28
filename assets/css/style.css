@@ -501,17 +501,17 @@ p {
 .hero-area.item1 {
 
     /* background-image: url('/assets/images/home/img-1.webp'); */
-    background-image: url('G3B/assets/images/home/img-1.webp');
+    background-image: url('/G3B/assets/images/home/img-1.webp');
 }
 
 .hero-area.item2 {
     /* background-image: url('/assets/images/home/img-2.webp'); */
-    background-image: url('G3B/assets/images/home/img-2.webp');
+    background-image: url('/G3B/assets/images/home/img-2.webp');
 }
 
 .hero-area.item3 {
     /* background-image: url('/assets/images/home/img-3.webp'); */
-    background-image: url('G3B/assets/images/home/img-3.webp');
+    background-image: url('/G3B/assets/images/home/img-3.webp');
 }
 
 .hero-area.item1:before,
