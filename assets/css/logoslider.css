@@ -4,7 +4,7 @@
     }
 
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 5));
     }
 }
 
@@ -17,16 +17,13 @@
 }
 
 .slider .slide-track {
-    animation: scroll 40s linear infinite;
+    animation: scroll 20s linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 10);
 }
 
 .slider .slide {
     height: 100px;
-    width: 250px;
-}
-
-.logo-slider-area .sec-heading{
-    
+    /* width: 250px; */
+    margin: 0 50px;
 }

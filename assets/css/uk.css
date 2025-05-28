@@ -55,13 +55,27 @@ tr:hover {
 }
 
 .top-uk .topukcourse-card:hover {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+
+    -webkit-box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10)
 }
 
-.top-uk .topukcourse-card .ukimage img {
+/* .top-uk .topukcourse-card .ukimage img {
     width: 50px;
     height: 50px;
+} */
+
+
+.top-uk .topukcourse-card .ukimage  {
+    width: fit-content;
+}
+.top-uk .topukcourse-card .ukimage img {
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .top-uk .topukcourse-card .course-title {
@@ -89,8 +103,11 @@ tr:hover {
 }
 
 .intakes-uk .intakeuk-card:hover {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+
+    -webkit-box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10)
 }
 
 .intakes-uk .intakeuk-card .intakenum {
@@ -135,9 +152,12 @@ tr:hover {
 }
 
 .cost-uk .costuk-card:hover {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
     /* border-left: 3px solid #FF630E; */
+
+    -webkit-box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10);
+    box-shadow: 0 20px 30px rgba(51, 51, 51, 0.10)
 }
 
 .cost-uk .with-line {
@@ -248,7 +268,7 @@ tr:hover {
     }
 
     .cost-uk .costuk-card .course-title {
-        margin:  0;
+        margin: 0;
         font-size: 15px;
     }
 

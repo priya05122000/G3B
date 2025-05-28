@@ -20,6 +20,8 @@
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
 
+    <link rel="stylesheet" href="assets/css/newzealand.css">
+
     <!-- Prevent FOUC -->
     <style>
         body {
@@ -58,7 +60,7 @@
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
@@ -95,28 +97,79 @@
                         <div class="blog-post-thumb">
                             <img src="assets/images/study-abroad/newzealand.webp" alt="image" class="img-fluid">
                         </div>
-                        <h4 class="service-title pb-2">Study Abroad in New Zealand with G3B Education</h4>
-                        <div class="entry-content">
-                            <p>Embark on an extraordinary academic journey in New Zealand with G3B Education, your
-                                trusted partner for global learning opportunities. Known for its breathtaking
-                                landscapes, world-class education system, and vibrant culture, New Zealand offers a
-                                unique study abroad experience that combines academic excellence with unforgettable
-                                adventures.</p>
-                            <p>At G3B Education, we specialize in guiding students toward achieving their dreams of
-                                studying in New Zealand. Our expert team provides personalized support, helping you
-                                choose the ideal course and institution that aligns with your career aspirations. From
-                                undergraduate to postgraduate programs, New Zealand boasts renowned universities and
-                                colleges offering a wide array of disciplines, including engineering, business,
-                                healthcare, and creative arts.</p>
-                            <p>Navigating the complexities of studying abroad can be overwhelming, but with G3B
-                                Education by your side, the process becomes seamless. We assist with every step,
-                                including course selection, application submission, scholarship guidance, and visa
-                                processing, ensuring you transition smoothly to your new academic life.</p>
-                            <p>What sets New Zealand apart is its commitment to providing high-quality education with a
-                                focus on research and practical learning. The country’s welcoming environment, diverse
-                                communities, and strong emphasis on work-life balance create the perfect setting for
-                                academic and personal growth.</p>
+                        <div>
+                            <h4 class="service-title pb-2">Study Abroad in New Zealand with G3B Education</h4>
+                            <div class="entry-content">
+                                <p>New Zealand is known for its breath-taking landscapes, world-class education system,
+                                    and vibrant culture, New Zealand offers a unique study abroad experience that
+                                    combines academic excellence with unforgettable adventures. What sets New Zealand
+                                    apart is its commitment to providing high-quality education with a focus on research
+                                    and practical learning. The country’s welcoming environment, diverse communities,
+                                    and strong emphasis on work-life balance create the perfect setting for academic and
+                                    personal growth.</p>
+                            </div>
                         </div>
+
+                        <div>
+                            <h4 class="service-title pb-2 pt-4">Sought after courses in New Zealand</h4>
+                            <ul>
+                                <ul>
+
+                                    <li><b>Engineering</b> – Civil, Mechanical, Electronics, Telecommunication,
+                                        Aerospace, etc.</li>
+                                    <li><b>Computer & IT</b> – Computer Science, Artificial Intelligence, IT, Machine
+                                        Learning, Data Science</li>
+                                    <li><b>Management</b> – Business management, Marketing, Accounting & Finances,
+                                        Analytics, etc.</li>
+                                    <li><b>Agriculture</b> – Forestry, Agricultural Science, Food and Fibre Production,
+                                        etc.</li>
+                                    <li><b>Hospitality</b> – Tourism, Catering, Food Science etc.</li>
+                                    <li><b>Sciences</b> – Environmental Science, Math, Physics, Chemistry, Anthropology
+                                    </li>
+                                    <li><b>Sports Management</b> – Sports Physio, Sports Medicine</li>
+                                    <li><b>Arts</b> – Fine Arts, Graphics Design, Animation</li>
+                                </ul>
+
+
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="service-title pt-4 color-blue">Why should you study in the New Zealand?</h4>
+                            <ul class="widget-list widget-list-p" style="padding-left: 21px;">
+                                <li><a><i class="fa fa-angle-right"></i> <b>Top Ranking Universities:</b>
+                                        New Zealand hosts several globally top ranking universities, ensuring a unified
+                                        and
+                                        memorable learning experience.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Part Time Work Opportunities:</b>
+                                        International students get ample opportunities to work while studying allowing
+                                        them
+                                        to achieve practical knowledge as well as earn sufficiently to meet their
+                                        routine
+                                        expenses.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Safe Living Environment:</b>
+                                        New Zealand is renowned for a safe and peaceful atmosphere very favorable for
+                                        international students to concentrate on their academics.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>World Class Educational Infrastructure:</b>
+                                        New Zealand’s educational institutes are equipped with world class education
+                                        infrastructure that provide an energetic, innovative and stimulating environment
+                                        enabling international students enhance their knowledge and aids assisting them
+                                        in
+                                        accomplishing the international perspective.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Job Prospects:</b>
+                                        Post completion of the educational courses, students may get opportunities to
+                                        take
+                                        up employment offering handsome pay and perks along with a work life
+                                        balance.</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
                     </div>
                 </div>
                 <!--start sidebar-->
@@ -124,7 +177,7 @@
                     <div class="blog-sidebar">
 
                         <!--start widget-->
-                        <div id="studyabroad-widget"></div>
+                        <div id="studyabroad-widget" class=" d-none d-md-block"></div>
                         <script>
                             fetch('common-files/studyabroad-widget.html')
                                 .then(res => res.text())
@@ -135,7 +188,7 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform"></div>
+                        <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
                             fetch('common-files/enquireform.html')
                                 .then(res => res.text())
@@ -148,6 +201,258 @@
                     </div>
                 </div>
                 <!--end sidebar-->
+
+                <div class="col-lg-12">
+                    <h4 class="service-title pb-4 pt-5 pt-lg-4">Top Universities/institutes in the New Zealand</h4>
+                    <div class="row top-newzealand ">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/The University of Auckland.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>The University of Auckland</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 65</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/university-of-otago.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>University of Otago</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 214</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/University of Waikato.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>University of Waikato</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 235</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/Massey University.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>Massey University</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 239</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/victoria-university-of-wellington.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>Victoria University of Wellington</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 244</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/University of Canterbury.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>University of Canterbury</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 261</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/Lincoln University.webp" alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>Lincoln University</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 371</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="topnewzealandcourse-card">
+                                <div class="newzealandimage">
+                                    <img src="/assets/images/clg_logo/Logo_of_Auckland_University_of_Technology.webp"
+                                        alt="">
+                                </div>
+                                <h3 class="course-title">
+                                    <a>Auckland University of Technology</a>
+                                </h3>
+                                <p class="course-rank">QS Ranking 2025 : 412
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class=" what-we-offer-section overlay ">
+                        <div class="container">
+                            <div class=" offer-content-wrapper row">
+                                <div class="col-xl-5 col-lg-6 d-block d-md-none d-lg-block">
+                                    <div class="discount-img" style="height: 100%;">
+                                        <img src="/assets/images/scholarship-newzealand.webp" class="img-fluid"
+                                            alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-6 col-md-12 scholar  ">
+                                    <div class="offered">
+
+                                        <h2>Scholarships Offered in newzealand</h2>
+
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>The NZEA program:</b> Offers 29 scholarships (NZD 5,000–20,000) for
+                                            Indian students at 8 leading New Zealand universities.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>New Zealand Commonwealth Scholarships:</b> For Indian & other
+                                            Commonwealth students pursuing PG courses. Covers tuition, living, travel,
+                                            insurance & setup costs (NZD 5,000–20,000).
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>University of Auckland International Student Excellence Scholarships:</b>
+                                            Offers economic aid t to high-achieving international students.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>University of Otago International Research Masters Scholarships:</b>
+                                            Offers a stipend and tuition fee waiver for students pursuing a Master's
+                                            degree by thesis.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>University of Waikato International scholarships:</b> Provides NZ$5,000
+                                            towards tuition fees for both undergraduate and postgraduate programs.
+                                        </h6>
+                                        <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
+                                            <b>Victoria University of Wellington scholarships:</b> Funding for Master's
+                                            & PhD programs. AUT undergraduate and postgraduate scholarships: Offers
+                                            financial assistance to international students, particularly from South
+                                            Asia, to help cover tuition costs.
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h4 class="service-title pt-4">Intakes in New Zealand</h4>
+                    <p class="pb-4 ">New Zealand follows a four season intake routine thereby giving ample opportunities
+                        to students
+                        to choose from the season’s suiting them.</p>
+                    <div class="row intakes-newzealand ">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="intakenewzealand-card">
+                                <h2 class="intakenum">
+                                    01
+                                </h2>
+                                <h3 class="course-title">
+                                    <a>Summer intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : July - August</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 ">
+                            <div class="intakenewzealand-card">
+                                <h2 class="intakenum">
+                                    02
+                                </h2>
+                                <h3 class="course-title">
+                                    <a>Autumn intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : September - October
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="intakenewzealand-card">
+                                <h2 class="intakenum">
+                                    02
+                                </h2>
+                                <h3 class="course-title">
+                                    <a>Winter intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : November - February
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="intakenewzealand-card">
+                                <h2 class="intakenum">
+                                    02
+                                </h2>
+                                <h3 class="course-title">
+                                    <a>Spring intake</a>
+                                </h3>
+                                <p class="course-rank">Duration : March - June
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row cost-newzealand pt-4">
+                        <div class="col-lg-4">
+                            <h6 class="with-line">Choose your plan</h6>
+                            <h4 class="service-title ">Approximate Studying Cost in the newzealand</h4>
+                            <p class="mb-2">Enhance your team communication with the best pricing plan and available in
+                                the market.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="costnewzealand-card">
+                                        <h3 class="course-title">
+                                            <a>Undergraduate Bachelor’s degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 10,00,000 – Rs. 23,00,000
+                                            </strong>
+
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costnewzealand-card">
+                                        <h3 class="course-title">
+                                            <a>Postgraduate Master's degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 10,00,000 – Rs. 20,00,000
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="costnewzealand-card">
+                                        <h3 class="course-title">
+                                            <a>Doctoral degree </a>
+                                        </h3>
+                                        <h3 class="course-title">
+                                            Average Annual Fees (in Rupees) :
+                                            <strong>Rs. 3,50,000 – Rs. 4,50,000
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><i>* Subject to change</i></p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
 

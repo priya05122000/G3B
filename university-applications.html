@@ -56,12 +56,12 @@
 
 <body>
 
-     <noscript>
+    <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
@@ -155,7 +155,7 @@
                         <!--start widget-->
 
                         <!--start widget-->
-                        <div id="ourservices-widget"></div>
+                        <div id="ourservices-widget" class="pt-4 pt-lg-0 d-none d-md-block"></div>
                         <script>
                             fetch('common-files/ourservices-widget.html')
                                 .then(response => response.text())
@@ -168,7 +168,7 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform"></div>
+                        <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
                             fetch('common-files/enquireform.html')
                                 .then(res => res.text())
@@ -182,7 +182,8 @@
                 </div>
                 <!--end sidebar-->
             </div>
-            <p>At G3B Education, we turn your university application process into a structured, stress-free experience,
+            <p class="pt-4">At G3B Education, we turn your university application process into a structured, stress-free
+                experience,
                 setting you on the path to academic success and global opportunities. Let us help you take the first
                 step toward realizing your dream of studying abroad!</p>
 

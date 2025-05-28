@@ -1,0 +1,30 @@
+.blog-area.exam-info-section {
+    background-color: #fff;
+    padding: 50px 0 30px;
+}
+
+.exam-info-section.flex-fill a {
+    /* display: block; */
+    background-color: #FF630E;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exam-thumb {
+    height: 420px;
+    margin-bottom: 30px;
+
+}
+
+.exam-thumb img {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -63,14 +63,6 @@
         object-position: center;
     }
 
-    .about-img-inner {
-        display: none;
-    }
-
-    .about-img-two {
-        display: none;
-    }
-
     /* .discount-img.girl {
         display: none !important;
     } */
@@ -103,10 +95,22 @@
     }
 
     .about-area.collageimages .combineimage .about8 {
+
+        display: none;
+    }
+
+
+    .about-img-inner {
+        display: none;
+    }
+
+    .about-area.collageimages .combineimage .about-img-two .about7 {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        /* display: none; */
     }
+
 
     .blog-post-thumb {
         height: 450px;
@@ -126,6 +130,20 @@
         margin: 0px;
     }
 
+    .about-img-two {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0%, 0%);
+    }
+
+    /* .test-widget .menu-list.widget,
+    .visa-widget .menu-list.widget,
+    .scholarship-widget .menu-list.widget,
+    .departure-widget .menu-list.widget {
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    } */
 
 
 }
@@ -243,9 +261,9 @@
         margin: 0px;
     }
 
-    .blog-area .testpre-blog {
+    /* .blog-area .testpre-blog {
         margin-top: 1rem;
-    }
+    } */
 
     .why-choose-area .value,
     .why-choose-area .mission {
@@ -314,6 +332,25 @@
         padding: 50px 0;
     }
 
+    .about-area.collageimages {
+        padding: 50px 0px;
+    }
+
+    .video-area.two {
+        padding: 50px 0;
+    }
+
+    .contact-area {
+        padding: 50px 0;
+    }
+
+    /* .test-widget .menu-list.widget,
+    .visa-widget .menu-list.widget,
+    .scholarship-widget .menu-list.widget,
+    .departure-widget .menu-list.widget {
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    } */
 
 }
 
@@ -422,6 +459,19 @@
 
     p {
         font-size: 15px;
+    }
+
+    .sec-heading h2,
+    .studycontent h2,
+    .about-cont h2,
+    .call-to-action-cont h2,
+    .scholar .offered h2,
+    .discount-cont h2,
+    .video-cont h2,
+    .newsletter-wrap h2,
+    .why-choose-area h2,
+    .contact-area h2 {
+        font-size: 35px;
     }
 
 
@@ -718,7 +768,55 @@
         font-size: 25px;
     }
 
-    .contact-form{
+    .contact-form {
         padding: 30px;
     }
+
+    .about-area.collageimages {
+        padding: 50px 0px;
+    }
+
+    .video-area.two {
+        padding: 50px 0;
+    }
+
+    .what-we-offer-section .offer-content-wrapper .scholar {
+        margin-top: 15px;
+    }
+
+    .what-we-offer-section .offer-content-wrapper .scholar .offered {
+        background-color: #130F40;
+        padding: 30px;
+    }
+
+    .contact-area {
+        padding: 50px 0;
+    }
+
+    .exam-thumb.gre img {
+        border-radius: 5px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    /* .test-widget .menu-list.widget {
+        padding-bottom: 0px;
+    }
+
+    .testpre-blog .blog-sidebar {
+        height: 100%;
+    } */
+
+
+    /* .test-widget .menu-list.widget,
+    .visa-widget .menu-list.widget,
+    .scholarship-widget .menu-list.widget,
+    .departure-widget .menu-list.widget {
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    } */
+
 }

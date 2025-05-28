@@ -240,9 +240,9 @@
                     <h5 class="pt-4"><b>Financial Planning and Scholarships</b></h5>
                     <p>We understand that financing your education abroad is a significant consideration.<br> Our team helps you with:</p>
                     <ul class="widget-list widget-list-p" style="padding-left: 21px;">
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Creating a realistic budget for tuition and living expenses.</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Identifying scholarship opportunities and financial aid options.</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Applying for education loans to ease your financial burden.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Creating a realistic budget for tuition and living expenses.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Identifying scholarship opportunities and financial aid options.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Applying for education loans to ease your financial burden.</a></li>
 
                     </ul>
                 </div>
@@ -250,9 +250,9 @@
                     <h5 class="pt-4"><b>Cultural and Pre-Departure Preparation</b></h5>
                     <p>Adjusting to life in a new country requires preparation. <br>We provide:</p>
                     <ul class="widget-list widget-list-p" style="padding-left: 21px;">
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Cultural orientation sessions to help you adapt to a new environment.</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Travel planning assistance, including accommodation and airport pickups.</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Tips for networking and making connections in your new academic.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Cultural orientation sessions to help you adapt to a new environment.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Travel planning assistance, including accommodation and airport pickups.</a></li>
+                        <li><a><i class="fa fa-angle-right"></i> Tips for networking and making connections in your new academic.</a></li>
 
                     </ul>
                 </div>

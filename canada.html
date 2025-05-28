@@ -59,7 +59,7 @@
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
@@ -97,55 +97,48 @@
                         <div class="blog-post-thumb">
                             <img src="assets/images/study-abroad/canada.webp" alt="image" class="img-fluid">
                         </div>
-                        <h4 class="service-title pb-2">Study Abroad in Canada - Your Pathway to a Bright Future</h4>
-                        <div class="entry-content">
-                            <p>Canada is one of the most sought-after destinations for international students, offering
-                                world-class education, cultural diversity, and abundant career opportunities. At G3B
-                                Education, we are committed to helping students turn their dreams of studying in Canada
-                                into a reality.</p>
-                            <p>As your trusted partner in international education, we provide end-to-end support
-                                tailored to your aspirations. From selecting top Canadian universities and colleges to
-                                guiding you through the application process and visa formalities, our expert team
-                                ensures a seamless journey toward academic success.</p>
-                            <p>Canada is home to globally recognized institutions offering a wide range of programs in
-                                fields such as engineering, healthcare, business, and technology. Its vibrant
-                                multicultural environment and high standard of living make it a perfect place for
-                                students to thrive personally and professionally.</p>
-                            <p>At G3B Education, we take pride in our partnerships with leading Canadian institutions.
-                                These collaborations allow us to offer students access to programs that align with their
-                                career goals, providing them with a competitive edge in the global job market.</p>
-
-                            <div class="footer-widget footer-contact">
-                                <h4 class="service-title pb-2 color-blue">Why Choose Canada Through G3B Education?</h4>
-                                <ul>
-                                    <li>
-                                        <i><img src="assets/images/next.webp" alt="image" class="img-fluid"></i>
-                                        <p class="m-0 color-grey">Access to top-ranked universities and colleges.</p>
-                                    </li>
-                                    <li>
-                                        <i class=""><img src="assets/images/next.webp" alt="image"
-                                                class="img-fluid"></i>
-                                        <p class="m-0 color-grey">Expert guidance in course and institution selection.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class=""><img src="assets/images/next.webp" alt="image"
-                                                class="img-fluid"></i>
-                                        <p class="m-0 color-grey">Comprehensive support for visa and application
-                                            processes.</p>
-                                    </li>
-                                    <li>
-                                        <i class=""><img src="assets/images/next.webp" alt="image"
-                                                class="img-fluid"></i>
-                                        <p class="m-0 color-grey">Personalized services tailored to your career
-                                            aspirations.</p>
-                                    </li>
-
-
-                                </ul>
+                        <div>
+                            <h4 class="service-title pb-2">Study Abroad in Canada - Your Pathway to a Bright Future</h4>
+                            <div class="entry-content">
+                                <p>Canada is one of the most sought-after destinations for international students,
+                                    offering
+                                    world-class education, cultural diversity, and abundant career opportunities. At G3B
+                                    Education, we are committed to helping students turn their dreams of studying in
+                                    Canada
+                                    into a reality.</p>
+                                <p>As your trusted partner in international education, we provide end-to-end support
+                                    tailored to your aspirations. From selecting top Canadian universities and colleges
+                                    to
+                                    guiding you through the application process and visa formalities, our expert team
+                                    ensures a seamless journey toward academic success.</p>
+                                <p>Canada is home to globally recognized institutions offering a wide range of programs
+                                    in
+                                    fields such as engineering, healthcare, business, and technology. Its vibrant
+                                    multicultural environment and high standard of living make it a perfect place for
+                                    students to thrive personally and professionally.</p>
+                                <p>At G3B Education, we take pride in our partnerships with leading Canadian
+                                    institutions.
+                                    These collaborations allow us to offer students access to programs that align with
+                                    their
+                                    career goals, providing them with a competitive edge in the global job market.</p>
                             </div>
+                        </div>
 
-
+                        <div>
+                            <h4 class="service-title pt-4 pb-2 color-blue">Why Choose Canada Through G3B Education?</h4>
+                            <ul class="widget-list widget-list-p" style="padding-left: 21px;">
+                                <li><a><i class="fa fa-angle-right"></i> Access to top-ranked universities and
+                                        colleges.</a></li>
+                                <li><a><i class="fa fa-angle-right"></i>Expert guidance in course and institution
+                                        selection.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i>Comprehensive support for visa and application
+                                        processes.</a>
+                                </li>
+                                <li><a><i class="fa fa-angle-right"></i>Personalized services tailored to your career
+                                        aspirations.</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -153,7 +146,7 @@
                 <div class="col-xl-4 col-lg-5">
                     <div class="blog-sidebar">
                         <!--start widget-->
-                        <div id="studyabroad-widget"></div>
+                        <div id="studyabroad-widget" class=" d-none d-md-block"></div>
                         <script>
                             fetch('common-files/studyabroad-widget.html')
                                 .then(res => res.text())
@@ -163,7 +156,7 @@
 
                         <!--end widget-->
                         <!--start widget-->
-                        <div id="enquireform"></div>
+                        <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
                             fetch('common-files/enquireform.html')
                                 .then(response => response.text())

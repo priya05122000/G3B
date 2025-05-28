@@ -52,12 +52,12 @@
 
 <body>
 
-     <noscript>
+    <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
@@ -94,17 +94,23 @@
                         <div class="blog-post-thumb">
                             <img src="assets/images/study-abroad/uk.webp" alt="image" class="img-fluid">
                         </div>
-                        <h4 class="service-title pb-2">Study Abroad in the UK - Enrich Your Future</h4>
-                        <div class="entry-content">
-                            <p>Embarking on a journey to study in the UK is a transformative experience, and at G3B
-                                Education, we are here to guide you every step of the way. The UK is renowned for its
-                                world-class education system, prestigious universities, and a multicultural environment
-                                that fosters innovation and growth. Whether you dream of pursuing undergraduate,
-                                postgraduate, or professional courses, the UK offers unparalleled opportunities to
-                                elevate your academic and career prospects.</p>
+                        <div>
+                            <h4 class="service-title pb-2">Study Abroad in the UK - Enrich Your Future</h4>
+                            <div class="entry-content">
+                                <p>Embarking on a journey to study in the UK is a transformative experience, and at G3B
+                                    Education, we are here to guide you every step of the way. The UK is renowned for
+                                    its
+                                    <b>world-class education system, prestigious universities, and a multicultural
+                                        environment</b>
+                                    that fosters innovation and growth. Whether you dream of pursuing undergraduate,
+                                    postgraduate, or professional courses, the UK offers unparalleled opportunities to
+                                    elevate your academic and career prospects.
+                                </p>
+                            </div>
+                        </div>
 
+                        <div class="pt-4">
                             <h4 class="service-title pb-2">Sought after courses in the UK</h4>
-
                             <ul>
                                 <li>
                                     <b> Engineering and technology </b>– Mechanical, Software, IT, Energy, Mining,
@@ -116,7 +122,8 @@
                                     Insurance
                                 </li>
                                 <li>
-                                    <b>Law</b>- Immigration Law, Corporate Law, Constitutional Law, Environmental Law
+                                    <b>Law</b>- Immigration Law, Corporate Law, Constitutional Law, Environmental
+                                    Law
                                     etc.
                                 </li>
                                 <li>
@@ -132,51 +139,59 @@
                                     <b>Sports</b>- Sports, culture, and recreation
                                 </li>
                                 <li>
-                                    <b>Services</b>- Hospitality, tourism & restaurants, Transportation and logistics,
+                                    <b>Services</b>- Hospitality, tourism & restaurants, Transportation and
+                                    logistics,
                                     Child Care
                                 </li>
                             </ul>
+                        </div>
 
-                            <br />
-
+                        <div class="pt-4">
                             <h4 class="service-title pb-2">Why Should You Study in the UK?</h4>
 
-                            <ul>
-                                <li><b>Excellent Education</b>:
-                                    The United Kingdom has the second-best higher education system in the world. The
-                                    Research Excellence Framework states that over 80–82% of research conducted by UK
-                                    institutions is considered "globally exceptional."</li>
+                            <ul class="widget-list widget-list-p" style="padding-left: 21px;">
+                                <li><a><i class="fa fa-angle-right"></i> <b>Excellent Education</b>:
+                                        The second best higher education system in the world is found in the
+                                        United Kingdom.The Research Excellence Framework lists with almost over 80-82%
+                                        of
+                                        the research conducted by UK institutions as "globally exceptional."</a>
+                                </li>
+
                                 <li>
 
-                                <li><b>Reputed Institutions</b>:
-                                    As per the QS World University Rankings 2025, the UK is home to four of the world’s
-                                    top ten universities.</li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Reputed Institutions</b>:
+                                        The UK hosts four of the top ten universities worldwide, as per the QS World
+                                        University Rankings 2025.</a> </li>
                                 <li>
 
-                                <li><b>Multifarious Course Offerings</b>:
-                                    UK universities offer over 1,000 courses across more than 20 subjects, giving
-                                    students the opportunity to specialize early.</li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Multifarious Course Offerings</b>:
+                                        UK universities provide a wide range of courses with chances for early
+                                        specialization. Students can choose from over 1,000 plus courses covering more
+                                        than
+                                        20 subject topics.</a></li>
                                 <li>
 
-                                <li><b>Short Duration of Degree</b>:
-                                    UK degrees are more affordable due to their shorter duration. Undergraduate degrees
-                                    typically take 3 years, and postgraduate degrees usually only take 1 year.</li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Short Duration of Degree</b>:
+                                        UK degrees are budget friendly and can save a lot of money as they are shorter
+                                        than
+                                        those in many other countries. While most undergraduate programs take three
+                                        years to
+                                        complete, postgraduate programs usually takes only one year.</a></li>
                                 <li>
 
-                                <li><b>Part-Time Job Opportunities</b>:
-                                    International students can work 18–20 hours per week during term and full-time
-                                    during holidays.</li>
+                                <li><a><i class="fa fa-angle-right"></i> <b>Part-Time Job Opportunities</b>:
+                                        International students are allowed to work up to 18-20 hours per week during the
+                                        school year and full-time during the holidays.</a></li>
                             </ul>
-
-                            <br />
                         </div>
+
                     </div>
                 </div>
                 <!--start sidebar-->
                 <div class="col-xl-4 col-lg-5">
                     <div class="blog-sidebar">
                         <!--start widget-->
-                        <div id="studyabroad-widget"></div>
+                        <div id="studyabroad-widget" class=" d-none d-md-block"></div>
                         <script>
                             fetch('common-files/studyabroad-widget.html')
                                 .then(res => res.text())
@@ -187,7 +202,7 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform"></div>
+                        <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
                             fetch('common-files/enquireform.html')
                                 .then(res => res.text())
@@ -204,119 +219,118 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="service-title pb-4 pt-4">Top UK Universities/Institutes</h4>
+                    <h4 class="service-title pb-4 pt-5 pt-lg-4">Top UK Universities/Institutes</h4>
                     <div class="row top-uk ">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/Shield_of_Imperial_College_London.svg.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">Imperial College London</a>
+                                    <a>Imperial College London</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 2</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/University-of-Oxford-logo-.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">University of Oxford</a>
+                                    <a>University of Oxford</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 3</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/University of Cambridge.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">University of Cambridge</a>
+                                    <a>University of Cambridge</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 5</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/ucl-logo.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">UCL (University College London)</a>
+                                    <a>UCL (University College London)</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 9</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/University_of_Edinburgh-Logo.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">The University of Edinburgh</a>
+                                    <a>The University of Edinburgh</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 27</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/The University of Manchester.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">The University of Manchester</a>
+                                    <a>The University of Manchester</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 34</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/King's_College_London_logo.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">King's College London</a>
+                                    <a>King's College London</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 40</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/LSE full logo.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">London School of Economics and Political Science (LSE)</a>
+                                    <a>London School of Economics and Political Science (LSE)</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 50</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/university-of-bristol9427.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">University of Bristol</a>
+                                    <a>University of Bristol</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 54</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="topukcourse-card">
                                 <div class="ukimage">
-                                    <img src="/assets/images/logos/1.png" alt="">
+                                    <img src="/assets/images/clg_logo/University_of_Warwick_logo.svg.webp" alt="">
                                 </div>
                                 <h3 class="course-title">
-                                    <a href="uk.html">The University of Warwick</a>
+                                    <a>The University of Warwick</a>
                                 </h3>
                                 <p class="course-rank">QS Ranking 2025 (Globally) : 69</p>
                             </div>
                         </div>
-
                     </div>
 
                     <section class=" what-we-offer-section overlay ">
@@ -327,37 +341,34 @@
                                         <img src="/assets/images/scholarship-uk.webp" class="img-fluid" alt="image">
                                     </div>
                                 </div>
-                                <div class="col-xl-7 col-lg-6 col-md-12  discount-cont whatweoffer">
-                                    <div>
+                                <div class="col-xl-7 col-lg-6 col-md-12 scholar  ">
+                                    <div class="offered">
 
                                         <h2>Scholarships Offered in the UK</h2>
 
                                         <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
-                                            <b>Commonwealth Scholarship and Fellowship Plan:</b> For
-                                            Master’s,
-                                            doctoral, distance learning, academic, professional, and medical
-                                            fellowships.
+                                            <b>Commonwealth Scholarship and Fellowship Plan:</b>
+                                            Master's and doctoral courses (for study in the UK and distance learning),
+                                            plus academic, professional and medical fellowships.
                                         </h6>
                                         <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
-                                            <b>Chevening Scholarship:</b> For professionals; selection by
-                                            the British
-                                            High Commission and embassies.
+                                            <b>Chevening Scholarship:</b>
+                                            For professionals, the selection is done by
+                                            the high commission and British embassies.
                                         </h6>
                                         <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
-                                            <b>GREAT Scholarships:</b> For one-year master's programs
-                                            across various
-                                            UK universities.
+                                            <b>GREAT Scholarships:</b>
+                                            Scholarships for one-year master's courses across
+                                            a range of subjects at a variety of UK universities.
                                         </h6>
                                         <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
-                                            <b>British Council Scholarships for Women in STEM:</b> For
-                                            women pursuing
-                                            a Master’s in science, technology, engineering, or mathematics at 19 UK
-                                            universities.
+                                            <b>British Council Scholarships for Women in STEM:</b> Scholarships for
+                                            women undertaking master's degrees in a science, technology, engineering or
+                                            mathematics course at one of 19 UK universities.
                                         </h6>
                                         <h6 class="color-white"><img src="assets/images/icons/right.webp" alt="image">
-                                            <b>Global Wales Scholarships:</b> Various scholarships for
-                                            international
-                                            students offered by Global Wales.
+                                            <b>Global Wales Scholarships:</b> Global Wales offers a variety of
+                                            scholarship opportunities for international students.
                                         </h6>
 
                                     </div>
@@ -375,7 +386,7 @@
                                     01
                                 </h2>
                                 <h3 class="course-title">
-                                    <a href="uk.html">Autumn/Fall intake</a>
+                                    <a>Autumn/Fall intake</a>
                                 </h3>
                                 <p class="course-rank">Duration : September to October</p>
                             </div>
@@ -386,7 +397,7 @@
                                     02
                                 </h2>
                                 <h3 class="course-title">
-                                    <a href="uk.html">Spring intake</a>
+                                    <a>Spring intake</a>
                                 </h3>
                                 <p class="course-rank">Duration : January to February</p>
                             </div>
@@ -397,7 +408,7 @@
                                     03
                                 </h2>
                                 <h3 class="course-title">
-                                    <a href="uk.html">Summer intake</a>
+                                    <a>Summer intake</a>
                                 </h3>
                                 <p class="course-rank">Duration : May</p>
                             </div>
@@ -408,7 +419,8 @@
                         <div class="col-lg-4">
                             <h6 class="with-line">Choose your plan</h6>
                             <h4 class="service-title ">Approximate Studying Costs in the UK</h4>
-                            <p>Enhance your team communication with the best pricing plan and available in the market.
+                            <p class="mb-2">Enhance your team communication with the best pricing plan and available in
+                                the market.
                             </p>
                         </div>
                         <div class="col-lg-8">
@@ -416,7 +428,7 @@
                                 <div class="col-lg-12">
                                     <div class="costuk-card">
                                         <h3 class="course-title">
-                                            <a href="uk.html">Undergraduate Bachelor’s degree </a>
+                                            <a>Undergraduate Bachelor’s degree </a>
                                         </h3>
                                         <h3 class="course-title">
                                             Average Fee (in Rupees) :
@@ -427,7 +439,7 @@
                                 <div class="col-lg-12">
                                     <div class="costuk-card">
                                         <h3 class="course-title">
-                                            <a href="uk.html">Postgraduate Master's degree </a>
+                                            <a>Postgraduate Master's degree </a>
                                         </h3>
                                         <h3 class="course-title">
                                             Average Fee (in Rupees) :
@@ -438,7 +450,7 @@
                                 <div class="col-lg-12">
                                     <div class="costuk-card">
                                         <h3 class="course-title">
-                                            <a href="uk.html">Doctoral degree </a>
+                                            <a>Doctoral degree </a>
                                         </h3>
                                         <h3 class="course-title">
                                             Average Fee (in Rupees) :
