@@ -191,6 +191,13 @@ p {
     background-size: cover
 }
 
+
+#profession i {
+  color: #FFD700;
+  margin-right: 2px;
+   margin-bottom: calc(0.7rem + 0.5vmin);
+}
+
 /*--------------------------------------------------------------------
     Preloader
 ---------------------------------------------------------------------*/
@@ -500,18 +507,18 @@ p {
 
 .hero-area.item1 {
 
-    /* background-image: url('/assets/images/home/img-1.webp'); */
-    background-image: url('/G3B/assets/images/home/img-1.webp');
+    background-image: url('../images/home/img-1.webp');
+    /* background-image: url('/G3B/assets/images/home/img-1.webp'); */
 }
 
 .hero-area.item2 {
-    /* background-image: url('/assets/images/home/img-2.webp'); */
-    background-image: url('/G3B/assets/images/home/img-2.webp');
+    background-image: url('../images/home/img-2.webp');
+    /* background-image: url('/G3B/assets/images/home/img-2.webp'); */
 }
 
 .hero-area.item3 {
-    /* background-image: url('/assets/images/home/img-3.webp'); */
-    background-image: url('/G3B/assets/images/home/img-3.webp');
+    background-image: url('../images/home/img-3.webp');
+    /* background-image: url('/G3B/assets/images/home/img-3.webp'); */
 }
 
 .hero-area.item1:before,
@@ -525,8 +532,6 @@ p {
     height: 100%;
     background-color: rgba(5, 1, 51, 0.7);
 }
-
-
 
 
 .caption-content {
@@ -3945,7 +3950,7 @@ p {
 .contact-form select {
     height: 50px !important;
     font-family: 'Rubik';
-    padding-left: 15px;
+    padding-left: 20px;
     margin-bottom: 20px;
     color: #6c757d;
 
@@ -3956,7 +3961,7 @@ p {
     background-color: white;
     background-size: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .enquireform select {

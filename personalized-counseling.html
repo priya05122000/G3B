@@ -49,6 +49,8 @@
     </script>
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
     <meta name="description"
@@ -102,7 +104,7 @@
                                 tailored approach. Our Personalized Counseling services are designed to understand your
                                 specific aspirations, strengths, and challenges, ensuring that every decision you make
                                 is informed and aligned with your academic and career goals.</p>
-                            <h5><b>What We Offer in Personalized Counseling</b></h5>
+                            <h5 class="mt-2"><b>What We Offer in Personalized Counseling</b></h5>
                             <ul class="timeline">
                                 <li class="timeline-card"><span aria-hidden="true"
                                         class="fa fa-stack pt-2 hw-icon fa-2x circle-custom "
@@ -141,7 +143,7 @@
                                             alt="" class=" bg-icon"> &nbsp;</span>
                                     <div class="subcard">
                                         <h4 class="timeline-title">Addressing Concerns:</h4>
-                                        <p>Whether it’s understanding admission requirements, financial planning, or
+                                        <p>Whether it's understanding admission requirements, financial planning, or
                                             cultural adaptation, our counselors address all your questions and provide
                                             practical solutions to challenges you might face.</p>
                                     </div>
@@ -152,7 +154,7 @@
                                             alt="" class=" bg-icon"> &nbsp;</span>
                                     <div class="subcard">
                                         <h4 class="timeline-title">Continuous Support:</h4>
-                                        <p>Personalized counseling doesn’t end with course selection. We stay with you
+                                        <p>Personalized counseling doesn't end with course selection. We stay with you
                                             throughout the journey, offering support for visa applications,
                                             pre-departure preparation, and post-arrival adjustments.</p>
                                     </div>
@@ -184,10 +186,14 @@
                         <!--start widget-->
                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/personalized-counseling.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
 
                         <!--end widget-->

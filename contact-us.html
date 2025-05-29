@@ -49,6 +49,7 @@
     </script>
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
@@ -158,16 +159,15 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-lg-6">
                     <div id="contactusform" style="height: 100%;"></div>
                     <script>
-                        fetch('common-files/contactusform.html')
+                        fetch('contactusform.html')
                             .then(response => response.text())
                             .then(data => {
                                 document.getElementById('contactusform').innerHTML = data;
-                                // Reinitialize any scripts if needed
+                                localStorage.setItem('currentpage','/g3b/contact-us.html' )
                             })
                             .catch(err => console.error('Failed to load body content:', err));
                     </script>
@@ -195,9 +195,7 @@
         });
     </script>
 
-
-
-    <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <!-- jQuery js -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!--proper js-->

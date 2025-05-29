@@ -49,6 +49,8 @@
     </script>
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
     <meta name="description"
@@ -197,12 +199,15 @@
                         <!--start widget-->
                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/netherlands.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
-
                         <!--end widget-->
 
                     </div>
@@ -248,7 +253,8 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="topnetherlandcourse-card">
                                 <div class="netherlandimage">
-                                    <img src="assets/images/clg_logo/Eindhoven_University_of_Technology_logo.webp" alt="">
+                                    <img src="assets/images/clg_logo/Eindhoven_University_of_Technology_logo.webp"
+                                        alt="">
                                 </div>
                                 <h3 class="course-title">
                                     <a>Eindhoven University of Technology</a>
@@ -270,7 +276,8 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="topnetherlandcourse-card">
                                 <div class="netherlandimage">
-                                    <img src="assets/images/clg_logo/Wageningen University & Research Centre.webp" alt="">
+                                    <img src="assets/images/clg_logo/Wageningen University & Research Centre.webp"
+                                        alt="">
                                 </div>
                                 <h3 class="course-title">
                                     <a>Wageningen University & Research Centre</a>

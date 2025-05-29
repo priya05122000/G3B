@@ -21,7 +21,7 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" as="style">
     <link rel="stylesheet" href="assets/css/style.css" as="style">
     <link rel="stylesheet" href="assets/css/responsive.css" as="style">
 
@@ -49,6 +49,8 @@
     </script>
 
     <title>G3B Education - Empowering Students for Global Success</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="empowering students, global education experts, international education planning, overseas success stories, G3B global learning" />
     <meta name="description"
@@ -102,7 +104,7 @@
                                 Education, we ensure the process is seamless and strategic. Our University Applications
                                 services are designed to maximize your chances of acceptance into top-tier programs
                                 while aligning with your aspirations and career goals.</p>
-                            <h5><b>How We Help</b></h5>
+                            <h5 class="mt-2"><b>How We Help</b></h5>
                             <ul class="timeline">
                                 <li class="timeline-card"><span aria-hidden="true"
                                         class="fa fa-stack pt-2 hw-icon fa-2x circle-custom "
@@ -171,16 +173,19 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform" class="pt-4 pt-md-0"></div>
+                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/university-applications.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
 
                         <!--end widget-->
-
                     </div>
                 </div>
                 <!--end sidebar-->

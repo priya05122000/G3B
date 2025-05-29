@@ -49,6 +49,8 @@
 
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
     <meta name="description"
@@ -162,14 +164,16 @@
                         <!--start widget-->
                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
+                            fetch('enquireform.html')
                                 .then(response => response.text())
                                 .then(data => {
                                     document.getElementById('enquireform').innerHTML = data;
                                     // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/canada.html')
                                 })
                                 .catch(err => console.error('Failed to load body content:', err));
                         </script>
+
                         <!--end widget-->
 
                     </div>

@@ -46,6 +46,8 @@
     </script>
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
     <meta name="description"
@@ -75,7 +77,8 @@
                 <!--start heading-->
                 <div class="col-lg-12">
                     <div class="banner-content text-center">
-                        <h1>Test Preparation : <span class="banner-span">PTE – Pearson Test of English Academic</span>
+                        <h1>PTE - Pearson Test of English <br /> <span class="banner-span">Globally accepted.
+                                Completely digital. Fast results</span>
                         </h1>
                         <!-- <p><a href="home.html">Home</a> <span> > </span>USA</p> -->
                         <div class=" flex-fill text-center">
@@ -99,9 +102,9 @@
                     </div>
 
                     <div>
-                        <h4 class="service-title exam-title">PTE – Pearson Test of English Academic</h4>
+                        <h4 class="service-title exam-title">PTE - Pearson Test of English </h4>
                         <div class="entry-content exam-content">
-                            <p>Looking to study or work abroad? The Pearson Test of English (PTE Academic) is a globally
+                            <p>Looking to study or work abroad? The Pearson Test of English (PTE) is a globally
                                 accepted English language proficiency exam that evaluates your ability to read, write,
                                 listen, and speak in English. Recognized by thousands of universities, governments, and
                                 institutions, the PTE is a smart choice for students and professionals.</p>
@@ -132,7 +135,7 @@
                                         Passport</a>
                                 </li>
                                 <li><a><i class="fa fa-angle-right"></i> <b>Eligibility : </b> Minimum
-                                        Qualification –
+                                        Qualification -
                                         Class 10 and above</a>
                                 </li>
                                 <li><a><i class="fa fa-angle-right"></i> <b>Test Validity : </b> 2
@@ -152,7 +155,7 @@
                     <div class="mb-0 mb-md-4 mb-lg-0">
                         <h4 class="service-title pb-2 pt-4">PTE Exam Structure</h4>
                         <div class="entry-content exam-content">
-                            <p>The PTE Academic evaluates your English proficiency through four key sections.</p>
+                            <p>The PTE evaluates your English proficiency through four key sections.</p>
                         </div>
                         <div class="entry-content">
                             <ul class="widget-list widget-list-p" style="padding-left: 21px;">
@@ -193,10 +196,14 @@
                         <!--start widget-->
                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/pte.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
 
                     </div>
@@ -255,8 +262,8 @@
                         <li><a><i class="fa fa-angle-right"></i> Options to <b>reschedule or cancel</b>
                                 your test
                                 are available — refer to the official
-                                <b>[PTE website]</b><a
-                                    href="https://www.pearsonpte.com/"></a>(https://www.pearsonpte.com/) for the
+                                <b>[PTE website]</b><a href="https://www.pearsonpte.com/"
+                                    style="text-decoration: underline;"> (https://www.pearsonpte.com/)</a> for the
                                 latest
                                 policies and
                                 fees.</a>

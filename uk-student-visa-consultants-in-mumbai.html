@@ -19,7 +19,7 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" as="style">
     <link rel="stylesheet" href="assets/css/style.css" as="style">
     <link rel="stylesheet" href="assets/css/responsive.css" as="style">
 
@@ -47,6 +47,8 @@
     </script>
 
     <title>UK Student Visa Consultants in Mumbai | G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="title" content="UK Student Visa Consultants in Mumbai | G3B Education">
     <meta name="description"
         content="Looking for the best UK student visa consultants in Mumbai? G3B Education helps students get UK admissions and visa approvals quickly and easily.">
@@ -59,12 +61,12 @@
 
 <body>
 
-     <noscript>
+    <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQW5HQ8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-<div id="common-body"></div>
+    <div id="common-body"></div>
     <script>
         fetch('common-files/common-body.html')
             .then(res => res.text())
@@ -217,10 +219,14 @@
                         <!--start widget-->
                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/uk-student-visa-consultants-in-mumbai.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
 
                         <!--end widget-->

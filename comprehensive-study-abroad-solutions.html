@@ -50,6 +50,7 @@
     </script>
 
     <title>Achieve Your Global Academic Goals with G3B Education</title>
+    <meta charset="UTF-8">
     <meta name="keywords"
         content="global education, study overseas, education consultancy, international universities, study abroad assistance" />
     <meta name="description"
@@ -161,13 +162,19 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform" class="pt-4 pt-md-0" class="pt-4 pt-md-0"></div>
+
+                        <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/comprehensive-study-abroad-solutions.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
+
 
                         <!--end widget-->
 

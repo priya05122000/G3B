@@ -14,6 +14,8 @@
         })(window, document, 'script', 'dataLayer', 'GTM-PRQW5HQ8');
     </script>
 
+
+
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/css/bootstrap.min.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
@@ -47,6 +49,8 @@
     </script>
 
     <title>World-Class Education Opportunities with G3B Education</title>
+    <meta charset="UTF-8">
+
     <meta name="keywords"
         content="top universities, global learning opportunities, study abroad with G3B, overseas education planning, study consultancy" />
     <meta name="description"
@@ -106,7 +110,7 @@
                                     recognized top notch education and provides an unparalleled cultural experience. At
                                     G3B Education, we help you explore these opportunities by matching you with
                                     institutions and courses that align with your ambitions and career goals. Whether
-                                    you’re pursuing undergraduate, postgraduate, or research programs, we offer expert
+                                    you're pursuing undergraduate, postgraduate, or research programs, we offer expert
                                     guidance tailored to your needs. USA is known for STEM courses. Science, Technology,
                                     Engineering, and Mathematics are referred to as STEM. It serves as a catch-all word
                                     for fields and educational initiatives that center on these four fundamental
@@ -124,28 +128,28 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <b> Computer Science </b>– Artificial Intelligence, Cybersecurity, and Software
+                                        <b> Computer Science </b>- Artificial Intelligence, Cybersecurity, and Software
                                         Development.
                                     </li>
                                     <li>
-                                        <b> Engineering </b>– Mechanical, Electrical, Aerospace, Civil, and Biomedical.
+                                        <b> Engineering </b>- Mechanical, Electrical, Aerospace, Civil, and Biomedical.
                                     </li>
                                     <li>
-                                        <b> Data Science and Analytics </b>– Data science and analytics courses,
+                                        <b> Data Science and Analytics </b>- Data science and analytics courses,
                                         Business Analytics, Machine Learning.
                                     </li>
                                     <li>
-                                        <b> Healthcare & Medicine </b>– Nursing (BSN, MSN), Pharmacy (PharmD), Public
+                                        <b> Healthcare & Medicine </b>- Nursing (BSN, MSN), Pharmacy (PharmD), Public
                                         Health,
                                         Physician Assistant Studies and Medical degrees.
                                     </li>
                                     <li>
-                                        <b> Business and Management MBA </b>– MBA programs, Project Management, and
+                                        <b> Business and Management MBA </b>- MBA programs, Project Management, and
                                         Business
                                         Analytics
                                     </li>
                                     <li>
-                                        <b> Finance and Accounting </b>– Courses like Certified Public Accountant (CPA),
+                                        <b> Finance and Accounting </b>- Courses like Certified Public Accountant (CPA),
                                         Chartered
                                         Financial Analyst (CFA), and Master of Finance (MFin).
                                     </li>
@@ -158,23 +162,23 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <b> Law </b>– Juris Doctor (JD) degrees and specialized LLM programs (Master of
+                                        <b> Law </b>- Juris Doctor (JD) degrees and specialized LLM programs (Master of
                                         Laws),
                                         International Business Law, Intellectual Property Law, and Environmental Law.
                                     </li>
                                     <li>
-                                        <b> Arts </b>– Graphic Design, Interior Design, and Film and Television
+                                        <b> Arts </b>- Graphic Design, Interior Design, and Film and Television
                                         Production
                                     </li>
                                     <li>
-                                        <b> Psychology </b>– Recommended for research, counselling, or other mental
+                                        <b> Psychology </b>- Recommended for research, counselling, or other mental
                                         health fields.
                                     </li>
                                     <li>
-                                        <b> Humanities </b>– Political Science and International Relations.
+                                        <b> Humanities </b>- Political Science and International Relations.
                                     </li>
                                     <li>
-                                        <b> Life Sciences </b>– Biology, Biotechnology, and Environmental Science
+                                        <b> Life Sciences </b>- Biology, Biotechnology, and Environmental Science
                                 </ul>
                             </div>
                         </div>
@@ -198,12 +202,16 @@
                         <!--end widget-->
 
                         <!--start widget-->
-                        <div id="enquireform" class="pt-4 pt-md-0"></div>
+                         <div id="enquireform" class="pt-4 pt-md-0"></div>
                         <script>
-                            fetch('common-files/enquireform.html')
-                                .then(res => res.text())
-                                .then(html => document.getElementById('enquireform').innerHTML = html)
-                                .catch(err => console.error('Error loading form:', err));
+                            fetch('enquireform.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('enquireform').innerHTML = data;
+                                    // Reinitialize any scripts if needed
+                                    localStorage.setItem('currentpage', '/g3b/usa.html')
+                                })
+                                .catch(err => console.error('Failed to load body content:', err));
                         </script>
 
                         <!--end widget-->
@@ -467,7 +475,7 @@
                                 <div class="col-lg-12">
                                     <div class="costusa-card">
                                         <h3 class="course-title">
-                                            <a>Undergraduate Bachelor’s degree </a>
+                                            <a>Undergraduate Bachelor's degree </a>
                                         </h3>
                                         <h3 class="course-title">
                                             Average Annual Fees (in Rupees) :
@@ -503,7 +511,7 @@
                                 </div>
                             </div>
                             <p><i>* Public universities charge no tuition fees for most of the programs, but may require
-                                    some semester contributions of INR 9,460–37,840 (€ 100–400) per semester</i></p>
+                                    some semester contributions of INR 9,460-37,840 (€ 100-400) per semester</i></p>
                         </div>
 
                     </div>

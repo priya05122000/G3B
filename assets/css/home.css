@@ -91,11 +91,11 @@ h1 {
     font-weight: bold;
 }
 
-#profession {
+/* #profession {
     font-size: calc(0.8rem + 0.3vmin);
     margin-bottom: calc(0.7rem + 0.5vmin);
     color: rgb(79, 143, 226);
-}
+} */
 
 #description {
     font-size: 14px;
