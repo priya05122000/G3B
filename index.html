@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/logoslider.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" as="style">
+    <link rel="stylesheet" href="assets/css/logofilter.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 
     <!-- Prevent FOUC -->
@@ -106,8 +109,8 @@
                         <!-- <img src="assets/images/home/img-1.webp" class="d-block w-100" alt="Slide 1"> -->
                         <div class="caption-content text-center py-5">
                             <h4>Welcome To G3B Education</h4>
-                            <h2>Study Abroad Made Easy – End-to-End Guidance You Can Trust</h2>
-                            <p>From Application to Arrival – Complete Study Abroad Support Under One Roof
+                            <h2>Study Abroad Made Easy - End-to-End Guidance You Can Trust</h2>
+                            <p>From Application to Arrival Complete Study Abroad Support Under One Roof
                             </p>
                             <ul class="responsive-list d-flex justify-content-center">
                                 <li class="flex-fill text-center">
@@ -183,7 +186,7 @@
                     <!--end discount-image-->
                 </div>
 
-                <div class="col-xl-6 col-lg-7">
+                <div class="col-xl-6 col-lg-7 home-about">
                     <!--start discount-content-->
                     <div class="discount-cont three" style=" width: 100%;">
                         <h4>About Us</h4>
@@ -314,18 +317,16 @@
                     <!-- </div> -->
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-12 discount-cont whatweoffer">
-
-                    <div id="contactusform"></div>
+                    <div id="contactusform" style="height: 100%;"></div>
                     <script>
                         fetch('contactusform.html')
                             .then(response => response.text())
                             .then(data => {
                                 document.getElementById('contactusform').innerHTML = data;
-                                // Reinitialize any scripts if needed
+                                localStorage.setItem('currentpage', '/g3b/home.html')
                             })
                             .catch(err => console.error('Failed to load body content:', err));
                     </script>
-
                 </div>
             </div>
         </div>
@@ -340,7 +341,7 @@
                     <h2>Why Choose Us?</h2>
                     <p>At G3B Education, we are committed to helping students achieve their academic and
                         professional
-                        aspirations by offering world-class guidance and unwavering support. Here’s why students
+                        aspirations by offering world-class guidance and unwavering support. Here's why students
                         choose
                         us as their trusted partner in their study abroad journey.</p>
                     <div class="why-choose-btn pb-5">
@@ -573,7 +574,7 @@
                         <div class="course-content" style="padding: 19px 20px;">
                             <h3 class="course-title" style="line-height: 18px;">
                                 <a href="pre-departure-and-post-arrival-support.html">Pre-Departure and Post-Arrival
-                                    Support⁠</a>
+                                    Support</a>
                             </h3>
                             <div class="course-content-footer">
                                 <ul>
@@ -612,7 +613,7 @@
     </section>
 
     <!-- Logo Slider Section -->
-    <section class="logo-slider-area bg-white pt-5 pb-5">
+    <!-- <section class="logo-slider-area bg-white pt-5 pb-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-5 col-lg-12 sec-heading m-0 text-center text-xl-left">
@@ -623,36 +624,173 @@
                         worldwide.</p>
                 </div>
                 <div class="col-xl-7 col-lg-12">
-                    <div style="display: flex; align-items: center;justify-content: center;">
+                    <div style="display: flex; align-items: center;justify-content: center;" class="mt-4 mt-lg-0">
                         <div class="slider">
                             <div class="slide-track">
                                 <div class="slide"><img
-                                        src="assets/images/clg_logo/Shield_of_Imperial_College_London.svg.webp"
-                                        height="100" alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/University-of-Oxford-logo-.webp"
-                                        height="100" alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/MIT_Seal.webp" height="100" alt=""
-                                        style=" object-fit: contain;" /></div>
+                                        src="assets/images/clg_logo/Shield_of_Imperial_College_London.svg.webp" /></div>
+                                <div class="slide"><img src="assets/images/clg_logo/University-of-Oxford-logo-.webp" />
+                                </div>
+                                <div class="slide"><img src="assets/images/clg_logo/MIT_Seal.webp" height="100"
+                                        alt="" /></div>
                                 <div class="slide"><img
                                         src="assets/images/clg_logo/Harvard_University_coat_of_arms.webp" height="100"
-                                        alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/The University of Auckland.webp"
-                                        height="100" alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/university-of-otago.webp"
-                                        height="100" alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/TUM-logo-.webp" height="100" alt=""
-                                        style=" object-fit: contain;" /></div>
+                                        alt="" /></div>
+                                <div class="slide"><img src="assets/images/clg_logo/The University of Auckland.webp" />
+                                </div>
+                                <div class="slide"><img src="assets/images/clg_logo/university-of-otago.webp" /></div>
+                                <div class="slide"><img src="assets/images/clg_logo/TUM-logo-.webp" height="100"
+                                        alt="" /></div>
                                 <div class="slide"><img src="assets/images/clg_logo/LMU_Muenchen_Logo.webp" height="100"
-                                        alt="" style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/TUDelft.webp" height="100" alt=""
-                                        style=" object-fit: contain;" /></div>
-                                <div class="slide"><img src="assets/images/clg_logo/Amsterdamuniversitylogo.webp"
-                                        height="100" alt="" style=" object-fit: contain;" /></div>
+                                        alt="" /></div>
+                                <div class="slide"><img src="assets/images/clg_logo/TUDelft.webp" height="100" alt="" />
+                                </div>
+                                <div class="slide"><img src="assets/images/clg_logo/Amsterdamuniversitylogo.webp" />
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section class="logo-filter-area">
+        <div class="container">
+
+            <div class=" sec-heading  text-center">
+                <h2>Universities</h2>
+                <p class=" mb-2">We collaborate with leading institutions and organizations that share our
+                    vision
+                    for
+                    transformative education. Together, we deliver innovative learning solutions to empower students
+                    worldwide.</p>
+            </div>
+
+
+            <div class="control logo-filter">
+
+                <div class="btn-group sec-heading">
+                    <!-- <button class="btn " data-filter="all">All</button> -->
+                    <button class="btn btn-clicked" data-filter="uk">
+                        <h2>UK</h2>
+                    </button>
+                    <button class="btn" data-filter="germany">
+                        <h2>Germany</h2>
+                    </button>
+                    <button class="btn" data-filter="australia">
+                        <h2>Australia</h2>
+                    </button>
+                    <button class="btn" data-filter="netherlands">
+                        <h2>Netherlands</h2>
+                    </button>
+                    <button class="btn" data-filter="dubai">
+                        <h2>Dubai</h2>
+                    </button>
+                </div>
+            </div>
+
+            <div class="university-logos">
+
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-1.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-2.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-3.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-4.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-5.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-6.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-7.webp">
+                </div>
+                <div class="box" data-item="uk">
+                    <img src="assets/images/clg_logo/uk-8.webp">
+                </div>
+
+
+                <div class="box" data-item="germany">
+                    <img src="assets/images/clg_logo/germany-1.webp">
+                </div>
+                <div class="box" data-item="germany">
+                    <img src="assets/images/clg_logo/germany-2.webp">
+                </div>
+                <div class="box" data-item="germany">
+                    <img src="assets/images/clg_logo/germany-3.webp">
+                </div>
+                <div class="box" data-item="germany">
+                    <img src="assets/images/clg_logo/germany-4.webp">
+                </div>
+                <div class="box" data-item="germany">
+                    <img src="assets/images/clg_logo/germany-5.webp">
+                </div>
+
+
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-1.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-2.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-3.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-4.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-5.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-6.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-7.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-8.webp">
+                </div>
+                <div class="box" data-item="australia">
+                    <img src="assets/images/clg_logo/australia-9.webp">
+                </div>
+
+                <div class="box" data-item="netherlands">
+                    <img src="assets/images/clg_logo/netherland-1.webp">
+                </div>
+                <div class="box" data-item="netherlands">
+                    <img src="assets/images/clg_logo/netherland-2.webp">
+                </div>
+                <div class="box" data-item="netherlands">
+                    <img src="assets/images/clg_logo/netherland-3.webp">
+                </div>
+
+                <div class="box" data-item="dubai">
+                    <img src="assets/images/clg_logo/dubai-1.webp">
+                </div>
+                <div class="box" data-item="dubai">
+                    <img src="assets/images/clg_logo/dubai-2.webp">
+                </div>
+                <div class="box" data-item="dubai">
+                    <img src="assets/images/clg_logo/dubai-3.webp">
+                </div>
+                <div class="box" data-item="dubai">
+                    <img src="assets/images/clg_logo/dubai-4.webp">
+                </div>
+                <div class="box" data-item="dubai">
+                    <img src="assets/images/clg_logo/dubai-5.webp">
+                </div>
+
             </div>
         </div>
     </section>
@@ -839,7 +977,8 @@
                 </div>
                 <div class="col-xl-7 col-lg-12 col-md-12 discount-cont whatweoffer">
                     <h2>What We Offer at G3B Education</h2>
-                    <p>At G3B Education, we aim to transform your dreams of studying abroad into reality with a
+                    <p class="mb-4">At G3B Education, we aim to transform your dreams of studying abroad into reality
+                        with a
                         comprehensive range of services tailored to meet your unique needs. Here's what we offer
                         to
                         ensure your journey to global learning is seamless and successful:</p>
@@ -977,77 +1116,57 @@
         {
             photo: 'url("assets/images/reviewimages/review-1.webp")',
             name: "Zhaba Mohammed Shaikh",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "I'm Zhaba Mohammed Shaikh, currently pursuing higher studies. I highly recommend Minal Kulkarni to anyone seeking a reliable mentor to study abroad and achieve their dreams."
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
+            description: "I'm Zhaba Mohammed Shaikh, currently pursuing higher studies. I highly recommend Minal Kulkarni to anyone seeking a reliable mentor to study abroad and achieve their dreams."
             // description: " I'm Zhaba Mohammed Shaikh currently pursuing my higher studies after graduation. Meeting Minal Kulkarni truly changed my perspective and thanks to her undying support and belief in me, made me choose my current path towards a new and better future, to pursue study abroad. Because of her faith in me I got more and more motivated to work harder towards my goal and I'm half way there in achieving it. I highly recommend her to anyone seeking a reliable and dedicated mentor if you want to study abroad and achieve your dreams."
         },
 
         {
             photo: 'url("assets/images/reviewimages/review-7.webp")',
             name: "Priya Natarajan",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "Joining an Australian university was easy with G3B Education’s expert help. Visa process guidance was smooth. I also liked the spoken English training for interviews. Highly recommend them."
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
+            description: "Joining an Australian university was easy with G3B Education's expert help. Visa process guidance was smooth. I also liked the spoken English training for interviews. Highly recommend them."
         },
 
         {
-            photo: 'url("assets/images/reviewimages/review-6.webp")',
-            name: "Arjun Selvam",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            photo: 'url("assets/images/reviewimages/review-10.webp")',
+            name: "Arjun Joshi",
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
             description: "G3B Education helped me with TOEFL test prep which was was excellent.Now I am living my dream of studying in Netherlands."
         },
 
         {
             photo: 'url("assets/images/reviewimages/review-5.webp")',
             name: " Karthik Raj",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
             description: "G3B Education assisted me with IELTS and UK visa procedure. They clarified everything and it was simple. I'm now studying in the UK!."
         },
         {
             photo: 'url("assets/images/reviewimages/review-4.webp")',
             name: "Sagar Deshmukh",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
             description: "G3B Education helped me with GRE training to get a good score which led to studying at a good Canadian University."
         },
 
         {
-            photo: 'url("assets/images/reviewimages/review-3.webp")',
+            photo: 'url("assets/images/reviewimages/review-8.webp")',
             name: "Priyanka Patil",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
             description: "Thanks to G3B Education for their Scholarship guidance. Now I am in a reputed Australian university. They also gave continuous support during my admission journey."
         },
         {
             photo: 'url("assets/images/reviewimages/review-2.webp")',
             name: "Rohit Jadhav",
-            profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-            description: "With G3B Education’s help I got into one of the UK universities. Their Visa guidance was very helpful. Whole team was very professional and supportive."
+            profession: `<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>`,
+            description: "With G3B Education's help I got into one of the UK universities. Their Visa guidance was very helpful. Whole team was very professional and supportive."
         },
 
-        // {
-        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
-        //     name: "Amit",
-        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-        //     description: "G3B Education made my dream of studying in Germany come true! From selecting the perfect university to assisting with my visa process, their expert team was with me every step of the way. Their guidance made the entire journey smooth and stress-free."
-        // },
-
-        // {
-        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
-        //     name: " Pankaj Joshi",
-        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-        //     description: "I had always dreamed of pursuing a Master's program abroad but didn’t know where to start. Thanks to G3B Education’s personalized approach, I found the perfect course at a world-class institution. Their support made the process seamless, and I couldn't be happier!"
-        // },
-
-        // {
-        //     photo: 'url("assets/images/reviewimages/review-1.webp")',
-        //     name: "Rahul Kumar",
-        //     profession: "⭐ ⭐ ⭐ ⭐ ⭐",
-        //     description: "G3B Education's dedication and professionalism stood out to me from the very beginning. They not only helped me choose the right university but also gave me confidence throughout the journey. Studying abroad was a big step, and I’m so glad I had them by my side."
-        // },
 
     ];
 
     imgDiv.style.backgroundImage = people[0].photo;
     personName.innerText = people[0].name;
-    profession.innerText = people[0].profession;
+    profession.innerHTML = people[0].profession;
     description.innerText = people[0].description;
     let currentPerson = 0;
 
@@ -1089,7 +1208,7 @@
             personName.innerText = people[personNumber].name;
         }, 400);
         setTimeout(() => {
-            profession.innerText = people[personNumber].profession;
+            profession.innerHTML = people[personNumber].profession;
         }, 400);
         setTimeout(() => {
             description.innerText = people[personNumber].description;
@@ -1160,5 +1279,37 @@
         description.style.height = "100%";
     });
 </script>
+
+<script>
+    const buttons = document.querySelectorAll('.btn');
+    const boxes = document.querySelectorAll('.box');
+
+    // Show only uk items by default
+    window.addEventListener('DOMContentLoaded', () => {
+        boxes.forEach((box) => {
+            box.style.display = box.dataset.item === 'uk' ? 'block' : 'none';
+        });
+    });
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            setActiveBtn(e.currentTarget);
+            const btnfilter = e.currentTarget.dataset.filter;
+
+            boxes.forEach((box) => {
+                box.style.display = box.dataset.item === btnfilter ? 'block' : 'none';
+            });
+        });
+    });
+
+    function setActiveBtn(activeBtn) {
+        buttons.forEach((button) => {
+            button.classList.remove('btn-clicked');
+        });
+        activeBtn.classList.add('btn-clicked');
+    }
+</script>
+
 
 </html>
