@@ -170,7 +170,7 @@
                                 .then(data => {
                                     document.getElementById('enquireform').innerHTML = data;
                                     // Reinitialize any scripts if needed
-                                    localStorage.setItem('currentpage', '/g3b/comprehensive-study-abroad-solutions.html')
+                                    localStorage.setItem('currentpage', window.location.pathname)
                                 })
                                 .catch(err => console.error('Failed to load body content:', err));
                         </script>
@@ -240,7 +240,7 @@
     </script>
 
 
- <!-- <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <!-- <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <!-- jQuery js -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!--proper js-->

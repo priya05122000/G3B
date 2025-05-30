@@ -200,7 +200,7 @@
                                 .then(data => {
                                     document.getElementById('enquireform').innerHTML = data;
                                     // Reinitialize any scripts if needed
-                                    localStorage.setItem('currentpage', '/g3b/new-zealand.html')
+                                    localStorage.setItem('currentpage', window.location.pathname)
                                 })
                                 .catch(err => console.error('Failed to load body content:', err));
                         </script>

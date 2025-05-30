@@ -323,7 +323,7 @@
                             .then(response => response.text())
                             .then(data => {
                                 document.getElementById('contactusform').innerHTML = data;
-                                localStorage.setItem('currentpage', '/g3b/home.html')
+                                localStorage.setItem('currentpage', window.location.pathname)
                             })
                             .catch(err => console.error('Failed to load body content:', err));
                     </script>
