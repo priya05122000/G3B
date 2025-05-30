@@ -167,7 +167,7 @@
     .mean-container .mean-bar {
         position: absolute;
         background: transparent;
-        top: 80px;
+        top: 78px;
         /* right: 35px */
     }
 
@@ -403,7 +403,7 @@
     .mean-container .mean-bar {
         position: absolute;
         background: transparent;
-        top: 18px;
+        top: 26px;
     }
 
     .mean-container a.meanmenu-reveal {

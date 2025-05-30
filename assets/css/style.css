@@ -343,7 +343,7 @@ p {
 }
 
 .header-btm-area {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .main-menu-wrap {
@@ -362,7 +362,7 @@ p {
 }
 
 .site-logo img {
-    max-width: 160px;
+    max-width: 150px;
     z-index: 99999;
 }
 
