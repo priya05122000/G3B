@@ -1,0 +1,125 @@
+.logo-filter-area {
+    padding: 100px 0;
+}
+
+.logo-filter-area .sec-heading {
+    margin: 0px 10% 0;
+}
+
+.logo-filter-area .btn-group .btn {
+    background: transparent;
+    padding: 0;
+    width: fit-content;
+    height: 30px;
+    border: none;
+    font-size: 0.7rem;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+    outline: none;
+}
+
+.logo-filter-area .btn-group .btn h2 {
+    font-size: 35px;
+    color: black;
+}
+
+
+.logo-filter-area .btn-group .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.logo-filter-area .btn-group button:hover,
+.logo-filter-area .btn-group .btn-clicked h2 {
+    color: #FF630E;
+}
+
+.logo-filter .sec-heading {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.box img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.box img:hover {
+    transform: scale(1.1);
+}
+
+.university-logos {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.control {
+    height: 90px;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+    .logo-filter-area .btn-group .btn h2 {
+        font-size: 30px;
+    }
+
+    .university-logos {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .logo-filter-area {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .logo-filter-area {
+        padding: 50px 0;
+    }
+
+    .logo-filter-area .btn-group {
+        word-break: break-all;
+    }
+
+    .control {
+        height: 120px;
+        margin: 0 auto;
+        padding: 0px 0px;
+    }
+
+    .university-logos {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .logo-filter-area .btn-group .btn h2 {
+        font-size: 26px;
+    }
+
+    .logo-filter-area .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+
+
+    .logo-filter-area .sec-heading {
+        margin: 0;
+    }
+}
