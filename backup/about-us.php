@@ -94,7 +94,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="banner-content text-center">
                         <h1>About Us</h1>
-                        <p><a href="index.html">Home</a> <span> > </span>About Us</p>
+                        <p><a href="home.html">Home</a> <span> > </span>About Us</p>
                     </div>
                 </div>
                 <!--end heading-->
