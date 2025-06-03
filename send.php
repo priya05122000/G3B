@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Sender and recipient
         $mail->setFrom($email, $fullName);
-        $mail->addAddress('npriyanagendran2000@gmail.com');
+        $mail->addAddress('admissions.g3beducation@gmail.com');
 
         // Email content
         $mail->isHTML(true);
