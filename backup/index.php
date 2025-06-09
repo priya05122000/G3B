@@ -3,10 +3,10 @@
 
 
 <head>
-    <title>G3B Education - Unlock Your Study Abroad Potential</title>
+    <title>G3B Education - Study Abroad Consultants In Nagercoil, Kanyakumari District</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="study abroad consultants, international study guidance, academic success, study abroad programs, overseas education support" />
-    <meta name="description" content=" Let G3B Education guide you toward international success. From university selection to visa support, we make studying abroad seamless." />
+    <meta name="description" content=" G3B Education is the leading study abroad consultants in Nagercoil, Kanyakumari. We offer expert guidance for university selection, visa support, & scholarships.Contact us for free consultation." />
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="1 day">
     <meta name="language" content="English">
@@ -372,7 +372,7 @@
                 <!--start sec-heading-->
                 <div class="col-lg-12">
                     <div class="sec-heading text-center">
-                        <h2>Explore Your Dream Destination with G3B Education</h2>
+                        <h2>Your Trusted Partner for International Learning</h2>
                         <p class="mb-2">At G3B Education, we open doors to a world of opportunities, enabling you to pursue your academic aspirations in top destinations like the USA, UK, Canada, Australia, Europe, Asia, and beyond.</p>
                         <p class="mb-2">As your trusted gateway to global learning, we are committed to making the dream of studying abroad a reality for ambitious students. Our dedicated team combines personalized guidance and years of expertise to simplify the complexities of international education. From choosing the right course and institution to navigating the application and visa processes, we’re with you every step of the way.</p>
                         <p class="mb-2">Through our collaborations with leading universities and educational institutions worldwide, we provide access to prestigious programs that align with your academic interests and career goals. At G3B Education, we don't just help you study abroad—we help you excel and thrive in a global environment.</p>
@@ -699,7 +699,7 @@
                 <!--start heading-->
                 <div class="col-lg-8 offset-lg-2">
                     <div class="sec-heading text-center">
-                        <h2>Study Abroad</h2>
+                        <h2>Explore Your Dream Destination with G3B Education</h2>
                     </div>
                 </div>
                 <!--end heading-->

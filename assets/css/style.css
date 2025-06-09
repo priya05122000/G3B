@@ -1565,6 +1565,15 @@ p {
     background-color: #130F40;
 }
 
+.discount-cont.whatweoffer h2 {
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    color: #fff;
+    /* text-align: center; */
+}
+
 .scholar .offered {
     background-color: #130F40;
     padding: 50px;

@@ -1,6 +1,6 @@
 <!--start footer-area-->
 <footer id="footer-area">
-    <a href="https://wa.me/918928659569" target="_blank" class="floatwhatsapp">
+    <a href="https://wa.me/9189286 59569" target="_blank" class="floatwhatsapp">
         <img src="assets/images/whatsapp-icon.webp" class="my-float1" alt=""></a>
     <!--start footer top area-->
     <div class="footer-top-area">
@@ -66,8 +66,8 @@
                             </li>
                             <li>
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <p class="m-0"><a href="tel:+918928659569">+91-8928659569</a></p>
-                                <p class="m-0"><a href="tel:+919820049389">+91-9820049389</a></p>
+                                <p class="m-0"><a href="tel:+918928659569">+91 89286 59569</a></p>
+                                <p class="m-0"><a href="tel:+919820049389">+91 98200 49389</a></p>
                             </li>
 
                         </ul>

@@ -20,7 +20,7 @@
                         <div class="header-contact-info text-start">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> <a class="color-white" href="mailto:admissions.g3beducation@gmail.com">admissions.g3beducation@gmail.com</a></li>
-                                <!-- <li><i class="fa fa-phone"></i> <a class="color-white" href="tel:+918928659569">+91-8928659569</a></li> -->
+                                <!-- <li><i class="fa fa-phone"></i> <a class="color-white" href="tel:+918928659569">+91 89286 59569</a></li> -->
                             </ul>
                         </div>
                     </div>
